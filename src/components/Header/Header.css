@@ -1,0 +1,18 @@
+.nav-link {
+	transition: color 0.3s;
+	/* Smooth color transition */
+}
+
+.nav-link:hover {
+	color: black;
+	/* Change color to black on hover */
+}
+.auth-message a {
+	text-decoration: underline;
+	color: inherit;
+	transition: color 0.3s ease;
+}
+
+.auth-message a:hover {
+	color: green;
+}

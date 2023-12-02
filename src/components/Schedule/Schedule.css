@@ -1,0 +1,47 @@
+.days {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.78);
+	padding: 10px 20px;
+	justify-content: space-around;
+	height: 50px;
+	font-size: 20px;
+}
+.day {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 100px;
+	font-weight: bold;
+}
+.grid {
+	border: solid black 3px;
+	/* padding: 0px 20px; */
+	display: flex;
+}
+.column {
+	width: calc(100% / 6);
+}
+.session {
+	color: white;
+	background-color: rgba(79, 122, 72, 0.7);
+	border: solid black 3px;
+	height: 70px;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.clear {
+	color: white;
+	/* background-color: green; */
+	border: solid black 3px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
