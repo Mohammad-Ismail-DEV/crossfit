@@ -1,14 +1,7 @@
-import React, { useEffect } from "react"
-import { test } from "../../axios/axios"
-import Header from "../../components/Header/Header"
 import "./Home.css"
 import Schedule from "../../components/Schedule/Schedule"
 
 const Home = () => {
-	useEffect(() => {
-		// test()
-	}, [])
-
 	const schedule = [
 		[
 			{
@@ -48,8 +41,6 @@ const Home = () => {
 
 	return (
 		<div>
-			<Header />
-			<div>Home</div>
 			<Schedule schedule={schedule} />
 		</div>
 	)

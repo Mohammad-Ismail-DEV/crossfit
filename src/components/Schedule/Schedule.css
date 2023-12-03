@@ -5,7 +5,7 @@
 	background-color: rgba(0, 0, 0, 0.78);
 	padding: 10px 20px;
 	justify-content: space-around;
-	height: 50px;
+	height: 40px;
 	font-size: 20px;
 }
 .day {
@@ -25,7 +25,8 @@
 }
 .session {
 	color: white;
-	background-color: rgba(79, 122, 72, 0.7);
+	font-size: 18px;
+	background-color: #82d026;
 	border: solid black 3px;
 	height: 70px;
 	font-weight: bold;
@@ -37,7 +38,6 @@
 }
 .clear {
 	color: white;
-	/* background-color: green; */
 	border: solid black 3px;
 	height: 70px;
 	display: flex;
