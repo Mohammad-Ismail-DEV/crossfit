@@ -38,7 +38,7 @@
 		justify-content: center;
 		color: white;
 		font-weight: bold;
-		padding: 0px 5px;
+		padding: 0px 15px;
 	}
 	.nav-link {
 		cursor: pointer;
@@ -47,7 +47,7 @@
 		flex-direction: column;
 		justify-content: center;
 		font-weight: bold;
-		padding: 0px 5px;
+		padding: 0px 15px;
 	}
 	.gd {
 		height: 7px;
