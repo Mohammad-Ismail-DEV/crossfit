@@ -2,6 +2,14 @@ import React from "react"
 import "./Schedule.css"
 
 const Schedule = ({ schedule }) => {
+	const def = [
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}]
+	]
 	return (
 		<div>
 			<div className="days">
@@ -13,20 +21,36 @@ const Schedule = ({ schedule }) => {
 				<div className="day">Saturday</div>
 			</div>
 			<div className="grid">
-				{schedule.map((day) => (
-					<div className="column">
-						{day.map((session, k) => (
-							<div
-								className={`${
-									session.class ? "session" : "clear"
-								}`}>
-								<div>{session.instructor}</div>
-								<div>{session.class}</div>
-								<div>{session.time}</div>
-							</div>
-						))}
-					</div>
-				))}
+				{schedule.length !== 0 &&
+					schedule.map((day) => (
+						<div className="column">
+							{day.map((session, k) => (
+								<div
+									className={`${
+										session.class ? "session" : "clear"
+									}`}>
+									<div>{session.instructor}</div>
+									<div>{session.class}</div>
+									<div>{session.time}</div>
+								</div>
+							))}
+						</div>
+					))}
+				{schedule.length === 0 &&
+					def.map((day) => (
+						<div className="column">
+							{day.map((session, k) => (
+								<div
+									className={`${
+										session.class ? "session" : "clear"
+									}`}>
+									<div>{session.instructor}</div>
+									<div>{session.class}</div>
+									<div>{session.time}</div>
+								</div>
+							))}
+						</div>
+					))}
 			</div>
 		</div>
 	)

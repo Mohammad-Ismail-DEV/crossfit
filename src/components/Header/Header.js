@@ -1,6 +1,10 @@
 import React, { useState } from "react"
 import "./Header.css"
 import { useNavigate } from "react-router-dom"
+import userImage from "../../assets/images/user.jpg"
+import logout from "../../assets/images/power-off.png"
+import scheduleImage from "../../assets/images/schedule.png"
+import Schedule from "../Schedule/Schedule"
 
 const Header = () => {
 	const navigate = useNavigate()
@@ -13,6 +17,14 @@ const Header = () => {
 		if (type === "") {
 			document.body.style.overflow = "unset"
 		}
+	}
+	const [dropDown, setDropDown] = useState(false)
+	const handleDropDown = () => {
+		setDropDown(!dropDown)
+	}
+	const handleLogout = () => {
+		setUser({ name: "", role: "" })
+		handleDropDown()
 	}
 
 	const data = {
@@ -34,10 +46,46 @@ const Header = () => {
 			document.body.style.overflow = "unset"
 		}
 	}
+	const schedule = [
+		[
+			{
+				instructor: "Coach Zeina",
+				time: "9:30 - 10:30 AM",
+				class: "Dance Blend"
+			},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
+		],
+		[
+			{},
+			{},
+			{
+				class: "Aerobics Body Pump",
+				instructor: "Coach Sam",
+				time: "10:30 - 11:30 Am"
+			},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
+		],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
+		[{}, {}, {}, {}, {}, {}, {}, {}, {}]
+	]
 
 	return (
 		<div className="Header">
-			<div className="title">
+			<div onClick={() => navigate("/")} className="title">
 				<div className="title-b">Cross</div>
 				<div className="title-g">Fit</div>
 			</div>
@@ -94,7 +142,19 @@ const Header = () => {
 			{user.name ? (
 				<div classname="logged-in">
 					<div className="my-classes"></div>
-					<div className="user">{user.name}</div>
+					<div onClick={handleDropDown} className="user">
+						<div className="user-image-holder">
+							<img
+								className="user-image"
+								src={userImage}
+								alt="user"
+							/>
+						</div>
+						<div className="user-name">
+							{user.name.charAt(0).toUpperCase() +
+								user.name.slice(1)}
+						</div>
+					</div>
 				</div>
 			) : (
 				<div className="handle-user">
@@ -205,6 +265,51 @@ const Header = () => {
 							className="submit-register">
 							Register
 						</div>
+					</div>
+				</div>
+			) : (
+				<></>
+			)}
+			{popUp === "schedule" ? (
+				<div
+					className="popUp"
+					onClick={(event) => {
+						if (event.target !== event.currentTarget) return
+						togglePopUp("")
+					}}>
+					<div className="schedule-holder">
+						<Schedule schedule={schedule} />
+					</div>
+				</div>
+			) : (
+				<></>
+			)}
+			{dropDown ? (
+				<div className="drop-down">
+					<div
+						onClick={() => {
+							handleDropDown()
+							togglePopUp("schedule")
+						}}
+						className="drop-down-item">
+						<div className="drop-down-image-holder">
+							<img
+								className="drop-down-image"
+								src={scheduleImage}
+								alt="schedule"
+							/>
+						</div>
+						My Classes
+					</div>
+					<div onClick={handleLogout} className="drop-down-item">
+						<div className="drop-down-image-holder">
+							<img
+								className="drop-down-image"
+								src={logout}
+								alt="logout"
+							/>
+						</div>
+						logout
 					</div>
 				</div>
 			) : (

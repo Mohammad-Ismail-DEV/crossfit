@@ -3,21 +3,20 @@
 	flex-direction: row;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.78);
-	padding: 10px 20px;
+	padding: 1vh 2vw;
 	justify-content: space-around;
-	height: 40px;
-	font-size: 20px;
+	height: 4vh;
+	font-size: 120%;
 }
 .day {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	width: 100px;
+	width: 10vw;
 	font-weight: bold;
 }
 .grid {
-	border: solid black 3px;
-	/* padding: 0px 20px; */
+	border: solid black 0.3vw;
 	display: flex;
 }
 .column {
@@ -25,23 +24,23 @@
 }
 .session {
 	color: white;
-	font-size: 18px;
+	font-size: 70%;
 	background-color: #82d026;
-	border: solid black 3px;
-	height: 70px;
+	border: solid black 0.3vw;
+	height: 3vh;
 	font-weight: bold;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 10px;
+	padding: 1vw;
 }
 .clear {
 	color: white;
-	border: solid black 3px;
-	height: 70px;
+	border: solid black 0.3vw;
+	height: 3vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px;
+	padding: 1vw;
 }
