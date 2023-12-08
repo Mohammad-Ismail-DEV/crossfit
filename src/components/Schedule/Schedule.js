@@ -1,7 +1,7 @@
 import React from "react"
 import "./Schedule.css"
 
-const Schedule = ({ schedule }) => {
+const Schedule = ({ schedule = [] }) => {
 	const def = [
 		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
 		[{}, {}, {}, {}, {}, {}, {}, {}, {}],

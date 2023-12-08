@@ -1,0 +1,152 @@
+.Home {
+	.intro {
+		height: 500px;
+		padding: 200px 0px 0px 400px;
+		background-image: url("../../assets/images/intro.jpg");
+		.intro-title {
+			font-size: 90px;
+			color: white;
+			font-weight: bold;
+		}
+		.intro-description {
+			width: 700px;
+			font-size: 17px;
+			color: white;
+			line-height: 1.8rem;
+		}
+	}
+	.gym {
+		display: flex;
+		flex-direction: column;
+		jusify-content: center;
+		align-items: center;
+		padding: 100px 0px;
+		.gd-big {
+			height: 7px;
+			width: 60px;
+			background-color: #82d026;
+		}
+		.gym-title {
+			font-weight: bold;
+			font-size: 40px;
+		}
+		.gym-description {
+			text-align: center;
+			width: 800px;
+			line-height: 1.8rem;
+		}
+		.icons {
+			margin-top: 50px;
+			display: flex;
+			gap: 20px;
+			.icon-holder {
+				cursor: pointer;
+				width: 15vw;
+				height: 180px;
+				background-color: #82d026;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				.icon-image {
+					width: 70px;
+					aspect-ratio: 1;
+				}
+				.icon-title {
+					color: white;
+					font-size: 26px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.testimonials {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		height: 500px;
+		padding: 200px 0px 0px 400px;
+		background-image: url("../../assets/images/testimonials.jpg");
+		.testimony {
+			width: 700px;
+			color: white;
+			font-weight: bold;
+			font-size: 45px;
+		}
+		.witness {
+			display: flex;
+			.witness-name {
+				color: white;
+				font-weight: bold;
+				font-size: 25px;
+			}
+			.witness-description {
+				color: #82d026;
+				font-weight: bold;
+				font-size: 25px;
+			}
+		}
+	}
+	.lifestyle {
+		display: flex;
+		flex-direction: column;
+		jusify-content: center;
+		align-items: center;
+		padding: 100px 0px;
+		.flex-row {
+			display: flex;
+			.lifestyle-text {
+				display: flex;
+				flex-direction: column;
+				.gd-big {
+					height: 7px;
+					width: 60px;
+					background-color: #82d026;
+				}
+				.lifestyle-title {
+					margin-top: 30px;
+					font-weight: bold;
+					font-size: 40px;
+				}
+				.lifestyle-description {
+					display: flex;
+					flex-grow: 1;
+					jusify-content: center;
+					align-items: center;
+					width: 500px;
+					line-height: 1.8rem;
+				}
+			}
+		}
+	}
+	.join {
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		gap: 20px;
+		background-color: #82d026;
+		color: white;
+		.join-title {
+			font-weight: bold;
+			font-size: 45px;
+		}
+		.join-description {
+			font-size: 20px;
+		}
+		.join-button {
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 130px;
+			height: 60px;
+			color: white;
+			font-weight: bold;
+			background-color: rgba(0, 0, 0);
+		}
+	}
+}
