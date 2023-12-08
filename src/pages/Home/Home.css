@@ -120,33 +120,4 @@
 			}
 		}
 	}
-	.join {
-		padding: 40px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		gap: 20px;
-		background-color: #82d026;
-		color: white;
-		.join-title {
-			font-weight: bold;
-			font-size: 45px;
-		}
-		.join-description {
-			font-size: 20px;
-		}
-		.join-button {
-			cursor: pointer;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 130px;
-			height: 60px;
-			color: white;
-			font-weight: bold;
-			background-color: rgba(0, 0, 0);
-		}
-	}
 }

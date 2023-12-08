@@ -101,18 +101,6 @@ const Home = () => {
 					<img src={lifestyle} alt="lifestyle" />
 				</div>
 			</div>
-			<div className="join">
-				<div className="join-title">Come & Train With Us</div>
-				<div className="join-description">
-					Join us and have access to all our classes and professional
-					coaches and personal trainers.
-				</div>
-				<div
-					onClick={() => navigate("/classes")}
-					className="join-button">
-					JOIN NOW
-				</div>
-			</div>
 		</div>
 	)
 }
