@@ -16,17 +16,21 @@
 	font-weight: bold;
 }
 .grid {
-	border: solid black 0.3vw;
+	border: 0.3vw;
 	display: flex;
+	gap: 10px;
 }
 .column {
 	width: calc(100% / 6);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 .session {
 	color: white;
 	font-size: 70%;
 	background-color: #82d026;
-	border: solid black 0.3vw;
+	/* border: 0.3vw solid transparent; */
 	height: 3vh;
 	font-weight: bold;
 	display: flex;
@@ -37,7 +41,8 @@
 }
 .clear {
 	color: white;
-	border: solid black 0.3vw;
+	background-color: white;
+	/* border: 0.3vw solid transparent; */
 	height: 3vh;
 	display: flex;
 	justify-content: center;

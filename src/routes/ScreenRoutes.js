@@ -10,10 +10,10 @@ const ScreenRoutes = () => {
 	return (
 		<Routes>
 			<Route path={"/"} element={<Home />} />
-			<Route path={"/about-us"} element={<AboutUs />} />
+			<Route path={"/about_us"} element={<AboutUs />} />
 			<Route path={"/classes"} element={<Classes />} />
 			<Route path={"/products"} element={<Products />} />
-			<Route path={"/contact-us"} element={<ContactUs />} />
+			<Route path={"/contact_us"} element={<ContactUs />} />
 		</Routes>
 	)
 }

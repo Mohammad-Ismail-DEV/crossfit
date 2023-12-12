@@ -101,9 +101,9 @@ const Header = () => {
 					</div>
 				</div>
 				<div
-					onClick={() => navigate("/about-us")}
+					onClick={() => navigate("/about_us")}
 					className={`${
-						path === "/about-us" ? "active-nav-link" : "nav-link"
+						path === "/about_us" ? "active-nav-link" : "nav-link"
 					}`}>
 					<div>
 						<div className="gd"></div>
@@ -131,9 +131,9 @@ const Header = () => {
 					</div>
 				</div>
 				<div
-					onClick={() => navigate("/contact-us")}
+					onClick={() => navigate("/contact_us")}
 					className={`${
-						path === "/contact-us" ? "active-nav-link" : "nav-link"
+						path === "/contact_us" ? "active-nav-link" : "nav-link"
 					}`}>
 					<div className="gd"></div>
 					<div>CONTACT US</div>

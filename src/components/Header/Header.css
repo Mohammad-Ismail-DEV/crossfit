@@ -191,7 +191,7 @@
 		.schedule-holder {
 			display: flex;
 			justify-content: center;
-			background-color: white;
+			/* background-color: white; */
 			padding: 30px 60px;
 			border-radius: 10px;
 		}
