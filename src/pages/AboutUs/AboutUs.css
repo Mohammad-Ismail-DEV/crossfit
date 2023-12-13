@@ -1,14 +1,12 @@
 .fullBody {
     margin: 0;
     padding: 0;
-    background-color: white;
     color: rgba(0, 0, 0, 0.78);
     font-family: 'Arial', sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-sizing: border-box;
-    /* border-top: 5px solid white;
-    border-bottom: 5px solid white; */
+    box-sizing: border-box; 
+    border-bottom: 25px solid white;
 }
  
 .gymImage {
@@ -19,8 +17,8 @@
     height: 500px;
 }
 .gymImage img{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
   
 .Title {
