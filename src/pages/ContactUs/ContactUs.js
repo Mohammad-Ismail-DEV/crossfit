@@ -43,7 +43,7 @@ const ContactUs = () => {
 							<div className="placeholder">Message</div>
 							<input
 								className="input"
-								type="longtext"
+								type="text"
 								placeholder="Message"
 							/>
 						</div>

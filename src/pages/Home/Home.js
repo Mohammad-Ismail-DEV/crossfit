@@ -66,7 +66,7 @@ const Home = () => {
 							src={stretching}
 							alt="stretching"
 						/>
-						<div className="icon-title">Cardio & Stretching</div>
+						<div className="icon-title">Cardio</div>
 					</div>
 				</div>
 			</div>
