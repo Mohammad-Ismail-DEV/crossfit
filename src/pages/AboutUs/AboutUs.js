@@ -1,10 +1,13 @@
 import React from "react"
 import './AboutUs.css' 
-import aboutUs from "../../assets/images/AboutUs.png"
+import aboutUs from "../../assets/images/about-img.jpg"
+import imgbg from "../../assets/images/aboutus-bg.jpg"
 
 const AboutUs = () => {
 	  return (
-		<div className="fullBody">
+		// <div className="headerpic">
+		// <img src={imgbg} style={{ maxWidth: '100%', height: 'auto' }}/>
+		<div className="fullBody">		
 			<div className="gymImage">
 				<img
         			src={aboutUs}
@@ -48,6 +51,7 @@ const AboutUs = () => {
 			</div>
 			
 		</div>
+		// </div>
 	  );
 	};
 	
