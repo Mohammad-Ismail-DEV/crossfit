@@ -1,52 +1,93 @@
-.fullBody {
-    display: flex;
-    background-color: #82d026;
-    color: rgba(0, 0, 0, 0.78);
-  }
-  
-  .gymImage {
-    flex: 1;
-    padding-right: 20px; /* Adjust padding as needed */
-  }
-  
-  .gymImage img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .form {
-    flex: 1;
-    padding-left: 20px; /* Adjust padding as needed */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-holder {
-    margin-bottom: 20px; /* Adjust margin as needed */
-  }
-  
-  .placeholder {
-    margin-bottom: 5px;
-  }
-  
-  .input {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .submit {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .submit:hover {
-    background-color: #45a049;
-  }
-  
+.ContactUs-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.ContactUs-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ContactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContactUs-Content {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ContactUs-Message,
+.ContactUs-form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.ContactUs-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-holder {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+	flex: 1;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+	width: 100%;
+}
+
+.input[type="email"] {
+  padding-left: 20px;
+}
+.input[type="name"] {
+  padding-right: 20px;
+}
+
+.ContactUs-Content {
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+	
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+	padding: 8px;
+}
+
+.ContactUs-submit {
+  width: 186px;
+  height: 60px;
+  background: #82d026;
+  color: #ffffff;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

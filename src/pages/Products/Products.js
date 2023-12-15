@@ -8,15 +8,13 @@ const Products = () => {
 	<div>
 		<div className="headImg">
 			<img src={ productImg }/>
-		</div>
-		<div>
-		<div className="card">
+		</div>	
+		<div className="Product-card">
         <img src={userImg} alt="Product Image" style={{ width: '100%' }} />
         <h1>Product Name</h1>
         <p className="price">Price</p>
 				 <p>Description of the product</p>
-      </div>
-		</div>
+      </div>	
 </div>
 	);
 }

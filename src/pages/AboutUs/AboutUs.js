@@ -7,14 +7,14 @@ const AboutUs = () => {
 	  return (
 		<div className="headerpic">
 		<img src={imgbg} style={{ maxWidth: '100%', height: 'auto' }}/>
-		<div className="fullBody">		
-			<div className="gymImage">
+		<div className="AboutUs-Body">		
+			<div className="AboutUs-Image">
 				<img
         			src={aboutUs}
         			alt="Green Room with Weights"
       			/>
     		</div>
-			<div className="Title">
+			<div className="AboutUs-Title">
 				<h2>Welcome</h2>
 				<p>
 					Welcome to our fitness sanctuary, where health meets inspiration. 

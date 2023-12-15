@@ -1,4 +1,4 @@
-.fullBody {
+.AboutUs-Body {
     margin: 0;
     padding: 0;
     color: rgba(0, 0, 0, 0.78);
@@ -9,29 +9,29 @@
     border-bottom: 25px solid white;
 }
  
-.gymImage {
+.AboutUs-Image {
     float: right;
     padding-right: 100px;
     margin: 20px;
     width: 500px;
     height: 500px;
 }
-.gymImage img{
+.AboutUs-Image img{
     width: 500px;
     height: 500px;
 }
   
-.Title {
+.AboutUs-Title {
     max-width: 600px;
     padding: 10px 20px;
   
 }
   
-.Title h2 {
+.AboutUs-Title h2 {
     color: rgba(0, 0, 0, 0.78);
 }
   
-.Title p {
+.AboutUs-Title p {
     margin-bottom: 20px;
 }
   
