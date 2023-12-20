@@ -1,0 +1,6 @@
+.Table {
+	z-index: 1;
+	.ag-center-cols-viewport {
+		min-height: unset !important;
+	}
+}

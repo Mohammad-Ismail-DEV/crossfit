@@ -1,0 +1,27 @@
+.Sidebar {
+	width: 15%;
+	background-color: #f4f4f4;
+	border-right: 2px solid #333;
+	height: 100%;
+}
+
+.sidebar-link {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	color: #333;
+}
+.active-sidebar-link {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #82d026;
+	color: white;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+.sidebar-link:hover {
+}

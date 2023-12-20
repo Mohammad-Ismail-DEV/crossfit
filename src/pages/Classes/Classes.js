@@ -1,6 +1,6 @@
-import React from "react";
-import './Classes.css'
-import classbg from "../../assets/images/classes-bg.jpg";
+import React from "react"
+import "./Classes.css"
+import classbg from "../../assets/images/classes-bg.jpg"
 import tablebg from "../../assets/images/classes-time-bg.jpg"
 import crossfit from "../../assets/images/crossfit.png"
 import fitness from "../../assets/images/fitness.png"
@@ -9,20 +9,15 @@ import stretching from "../../assets/images/stretching.png"
 import yoga from "../../assets/images/yoga.png"
 import { useNavigate } from "react-router-dom"
 
-
-
 const Classes = () => {
 	const navigate = useNavigate()
-  return (
-	<div>
-    <div className="classes-bg">
-    	<img 
-	  		src={classbg}
-	  		alt="classes" 
-		/>
-    </div>
-	<div className="gym">
-	<div className="icons">
+	return (
+		<div>
+			<div className="classes-bg">
+				<img className="image" src={classbg} alt="classes" />
+			</div>
+			<div className="gym">
+				<div className="icons">
 					<div
 						onClick={() => navigate("/classes")}
 						className="icon-holder">
@@ -73,14 +68,11 @@ const Classes = () => {
 						/>
 						<div className="icon-title">Yoga</div>
 					</div>
-					
-	</div>
-	</div>
-		<img src={tablebg}/>
-	</div>
-  );
+				</div>
+			</div>
+			<img className="image" src={tablebg} alt="table" />
+		</div>
+	)
 }
 
-
-
-export default Classes;
+export default Classes

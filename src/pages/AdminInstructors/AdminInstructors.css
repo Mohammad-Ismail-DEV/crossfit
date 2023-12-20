@@ -1,0 +1,37 @@
+.AdminInstructors {
+	.handle-data {
+		display: flex;
+		gap: 10px;
+		padding: 0px 10px 10px 0px;
+		.add-item {
+			border-radius: 5px;
+			padding: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			color: white;
+			background-color: #82d026;
+			gap: 5px;
+			.handle-data-icon {
+				width: 20px;
+				aspect-ratio: 1;
+			}
+		}
+		.refresh-table {
+			border-radius: 5px;
+			padding: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.85);
+			gap: 5px;
+			.handle-data-icon {
+				width: 20px;
+				aspect-ratio: 1;
+			}
+		}
+	}
+}

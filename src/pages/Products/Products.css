@@ -1,9 +1,12 @@
+.intro-image {
+	width: 100%;
+}
 .Product-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -13,6 +16,6 @@
 }
 
 .price {
-  color: black;
-  font-size: 22px;
+	color: black;
+	font-size: 22px;
 }

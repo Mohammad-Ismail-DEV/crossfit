@@ -191,7 +191,7 @@
 		.schedule-holder {
 			display: flex;
 			justify-content: center;
-			/* background-color: white; */
+			background-color: white;
 			padding: 30px 60px;
 			border-radius: 10px;
 		}
@@ -200,7 +200,7 @@
 		cursor: pointer;
 		background-color: white;
 		min-height: 60px;
-		width: 170px;
+		width: 190px;
 		border: 2px black solid;
 		border-radius: 3px;
 		position: absolute;
@@ -213,6 +213,7 @@
 		flex-direction: column;
 		gap: 5px;
 		padding: 5px 0px;
+		z-index: 3;
 		.drop-down-item {
 			width: 95%;
 			height: 50px;

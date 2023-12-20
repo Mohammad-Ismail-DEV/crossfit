@@ -1,0 +1,32 @@
+.Actions {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	.edit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		aspect-ratio: 1;
+		background-color: rgba(0, 0, 255, 0.7);
+		border-radius: 5px;
+		.action-icon {
+			height: 22px;
+			aspect-ratio: 1;
+		}
+	}
+	.delete {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		aspect-ratio: 1;
+		background-color: rgba(255, 0, 0, 0.7);
+		border-radius: 5px;
+		.action-icon {
+			height: 22px;
+			aspect-ratio: 1;
+		}
+	}
+}

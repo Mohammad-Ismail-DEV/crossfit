@@ -1,46 +1,49 @@
+.image {
+	width: 100%;
+}
 .gym {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0px;
-    .gd-big {
-        height: 7px;
-        width: 60px;
-        background-color: #82d026;
-    }
-    .gym-title {
-        font-weight: bold;
-        font-size: 40px;
-    }
-    .gym-description {
-        text-align: center;
-        width: 800px;
-        line-height: 1.8rem;
-    }
-    .icons {
-        margin-top: 50px;
-        display: flex;
-        gap: 20px;
-        .icon-holder {
-            cursor: pointer;
-            width: 15vw;
-            height: 180px;
-            background-color: #82d026;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            .icon-image {
-                width: 70px;
-                aspect-ratio: 1;
-            }
-            .icon-title {
-                color: white;
-                font-size: 26px;
-                font-weight: bold;
-            }
-        }
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+	.gd-big {
+		height: 7px;
+		width: 60px;
+		background-color: #82d026;
+	}
+	.gym-title {
+		font-weight: bold;
+		font-size: 40px;
+	}
+	.gym-description {
+		text-align: center;
+		width: 800px;
+		line-height: 1.8rem;
+	}
+	.icons {
+		margin-top: 50px;
+		display: flex;
+		gap: 20px;
+		.icon-holder {
+			cursor: pointer;
+			width: 15vw;
+			height: 180px;
+			background-color: #82d026;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			.icon-image {
+				width: 70px;
+				aspect-ratio: 1;
+			}
+			.icon-title {
+				color: white;
+				font-size: 26px;
+				font-weight: bold;
+			}
+		}
+	}
 }

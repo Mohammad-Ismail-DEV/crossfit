@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom"
 import userImage from "../../assets/images/user.jpg"
 import logout from "../../assets/images/power-off.png"
 import scheduleImage from "../../assets/images/schedule.png"
+import terminalImage from "../../assets/images/terminal.png"
+import { getMembers, postMember } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 
 const Header = () => {
 	const navigate = useNavigate()
 	const path = window.location.pathname
-	const [user, setUser] = useState({ name: "", role: "" })
+	const [user, setUser] = useState({})
 	const [popUp, setPopUp] = useState("")
 	const togglePopUp = (type) => {
 		setPopUp(type)
@@ -23,7 +25,10 @@ const Header = () => {
 		setDropDown(!dropDown)
 	}
 	const handleLogout = () => {
-		setUser({ name: "", role: "" })
+		if (user.role === "admin") {
+			navigate("/")
+		}
+		setUser({})
 		handleDropDown()
 	}
 
@@ -32,16 +37,23 @@ const Header = () => {
 		name: "",
 		password: "",
 		repeatPassword: "",
-		phoneNumber: ""
+		phone_number: ""
 	}
 
-	const handleLogin = () => {
-		console.log("data", data)
+	const handleLogin = async () => {
+		const r = await getMembers({
+			email: data.email,
+			password: data.password
+		})
+		setUser(r[0])
+		setPopUp("")
+		document.body.style.overflow = "unset"
+		console.log("r", r)
 	}
-	const handleRegister = () => {
-		setUser({ ...user, ...data })
+	const handleRegister = async () => {
 		if (data.password === data.repeatPassword) {
-			console.log("data", data)
+			const r = await postMember(data)
+			setUser(r)
 			setPopUp("")
 			document.body.style.overflow = "unset"
 		}
@@ -89,56 +101,66 @@ const Header = () => {
 				<div className="title-b">Cross</div>
 				<div className="title-g">Fit</div>
 			</div>
-			<div className="nav-links">
-				<div
-					onClick={() => navigate("/")}
-					className={`${
-						path === "/" ? "active-nav-link" : "nav-link"
-					}`}>
-					<div>
+			{user.role === "admin" ? (
+				<></>
+			) : (
+				<div className="nav-links">
+					<div
+						onClick={() => navigate("/")}
+						className={`${
+							path === "/" ? "active-nav-link" : "nav-link"
+						}`}>
+						<div>
+							<div className="gd"></div>
+							<div>HOME</div>
+						</div>
+					</div>
+					<div
+						onClick={() => navigate("/about_us")}
+						className={`${
+							path === "/about_us"
+								? "active-nav-link"
+								: "nav-link"
+						}`}>
+						<div>
+							<div className="gd"></div>
+							<div>ABOUT US</div>
+						</div>
+					</div>
+					<div
+						onClick={() => navigate("/classes")}
+						className={`${
+							path === "/classes" ? "active-nav-link" : "nav-link"
+						}`}>
+						<div>
+							<div className="gd"></div>
+							<div>CLASSES</div>
+						</div>
+					</div>
+					<div
+						onClick={() => navigate("/products")}
+						className={`${
+							path === "/products"
+								? "active-nav-link"
+								: "nav-link"
+						}`}>
+						<div>
+							<div className="gd"></div>
+							<div>PRODUCTS</div>
+						</div>
+					</div>
+					<div
+						onClick={() => navigate("/contact_us")}
+						className={`${
+							path === "/contact_us"
+								? "active-nav-link"
+								: "nav-link"
+						}`}>
 						<div className="gd"></div>
-						<div>HOME</div>
+						<div>CONTACT US</div>
 					</div>
 				</div>
-				<div
-					onClick={() => navigate("/about_us")}
-					className={`${
-						path === "/about_us" ? "active-nav-link" : "nav-link"
-					}`}>
-					<div>
-						<div className="gd"></div>
-						<div>ABOUT US</div>
-					</div>
-				</div>
-				<div
-					onClick={() => navigate("/classes")}
-					className={`${
-						path === "/classes" ? "active-nav-link" : "nav-link"
-					}`}>
-					<div>
-						<div className="gd"></div>
-						<div>CLASSES</div>
-					</div>
-				</div>
-				<div
-					onClick={() => navigate("/products")}
-					className={`${
-						path === "/products" ? "active-nav-link" : "nav-link"
-					}`}>
-					<div>
-						<div className="gd"></div>
-						<div>PRODUCTS</div>
-					</div>
-				</div>
-				<div
-					onClick={() => navigate("/contact_us")}
-					className={`${
-						path === "/contact_us" ? "active-nav-link" : "nav-link"
-					}`}>
-					<div className="gd"></div>
-					<div>CONTACT US</div>
-				</div>
-			</div>
+			)}
 			{user.name ? (
 				<div classname="logged-in">
 					<div className="my-classes"></div>
@@ -255,7 +277,7 @@ const Header = () => {
 							</div>
 							<input
 								onChange={(e) =>
-									(data.phoneNumber = e.target.value)
+									(data.phone_number = e.target.value)
 								}
 								className="input"
 							/>
@@ -286,21 +308,39 @@ const Header = () => {
 			)}
 			{dropDown ? (
 				<div className="drop-down">
-					<div
-						onClick={() => {
-							handleDropDown()
-							togglePopUp("schedule")
-						}}
-						className="drop-down-item">
-						<div className="drop-down-image-holder">
-							<img
-								className="drop-down-image"
-								src={scheduleImage}
-								alt="schedule"
-							/>
+					{user.role === "admin" ? (
+						<div
+							onClick={() => {
+								handleDropDown()
+								navigate("/admin_panel")
+							}}
+							className="drop-down-item">
+							<div className="drop-down-image-holder">
+								<img
+									className="drop-down-image"
+									src={terminalImage}
+									alt="schedule"
+								/>
+							</div>
+							Admin Panel
 						</div>
-						My Classes
-					</div>
+					) : (
+						<div
+							onClick={() => {
+								handleDropDown()
+								togglePopUp("schedule")
+							}}
+							className="drop-down-item">
+							<div className="drop-down-image-holder">
+								<img
+									className="drop-down-image"
+									src={scheduleImage}
+									alt="schedule"
+								/>
+							</div>
+							My Classes
+						</div>
+					)}
 					<div onClick={handleLogout} className="drop-down-item">
 						<div className="drop-down-image-holder">
 							<img
