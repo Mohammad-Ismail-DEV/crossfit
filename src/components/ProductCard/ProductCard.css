@@ -1,0 +1,27 @@
+.ProductCard {
+	border-radius: 10px;
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	.product-image {
+		width: 200px;
+		aspect-ratio: 1;
+		border-radius: 8px;
+	}
+	.product-name {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.product-price {
+		font-size: 18px;
+	}
+	.product-description {
+	}
+}

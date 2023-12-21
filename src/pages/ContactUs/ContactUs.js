@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import "./ContactUs.css"
 import contactUs from "../../assets/images/contact-bg.jpg"
 import Footer from "../../Components/Footer/Footer"
 
 const ContactUs = () => {
+	const [name, setName] = useState("")
+	const [email, setEmail] = useState("")
+	const [subject, setSubject] = useState("")
+	const [message, setMessage] = useState("")
+
 	return (
 		<div className="ContactUs">
 			<div className="ContactUs-bg">
@@ -22,40 +27,55 @@ const ContactUs = () => {
 				</div>
 				<div className="ContactUs-form">
 					<div className="input-group">
-						<div className="input-holder">
+						<div className="flex">
 							<div className="placeholder"></div>
 							<input
-								className="input"
+								value={name}
+								className="name-input"
 								type="text"
 								placeholder="Name"
+								onChange={(e) => setName(e.target.value)}
 							/>
-						</div>
-						<div className="input-holder">
 							<div className="placeholder"></div>
 							<input
-								className="input"
+								value={email}
+								className="email-input"
 								type="email"
 								placeholder="example@hotmail.com"
+								onChange={(e) => setEmail(e.target.value)}
 							/>
 						</div>
 					</div>
 					<div className="input-holder">
 						<div className="placeholder"></div>
 						<input
-							className="input"
+							value={subject}
+							className="subject-input"
 							type="text"
 							placeholder="Subject"
+							onChange={(e) => setSubject(e.target.value)}
 						/>
 					</div>
 					<div className="input-holder">
 						<div className="placeholder"></div>
 						<textarea
-							className="input"
+							value={message}
+							className="message-input"
 							placeholder="Your message..."
+							onChange={(e) => setMessage(e.target.value)}
 							rows="5"
 						/>
 					</div>
-					<div className="ContactUs-submit">Send</div>
+					<div
+						onClick={() => {
+							setEmail("")
+							setName("")
+							setSubject("")
+							setMessage("")
+						}}
+						className="ContactUs-submit">
+						Send
+					</div>
 				</div>
 			</div>
 			<Footer />

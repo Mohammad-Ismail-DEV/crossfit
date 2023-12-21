@@ -30,7 +30,7 @@ const AdminBookings = () => {
 	return (
 		<div className="AdminBookings">
 			<Sidebar />
-			<div class="page">
+			<div className="page">
 				<div className="handle-data">
 					<div onClick={handleProductPopUp} className="add-item">
 						<img src={add} alt="add" className="handle-data-icon" />

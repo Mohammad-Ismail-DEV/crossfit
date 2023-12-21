@@ -30,7 +30,7 @@ const AdminMembers = () => {
 	return (
 		<div className="AdminMembers">
 			<Sidebar />
-			<div class="page">
+			<div className="page">
 				<div className="handle-data">
 					<div onClick={handleData} className="refresh-table">
 						<img

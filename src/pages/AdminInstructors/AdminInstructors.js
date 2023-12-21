@@ -31,8 +31,8 @@ const AdminInstructors = () => {
 	return (
 		<div className="AdminInstructors">
 			<Sidebar />
-			<div class="page">
-				<div class="handle-data">
+			<div className="page">
+				<div className="handle-data">
 					<div onClick={handlePopUp} className="add-item">
 						<img src={add} alt="add" className="handle-data-icon" />
 						Add Instructor

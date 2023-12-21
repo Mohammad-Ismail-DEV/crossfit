@@ -30,7 +30,7 @@ const AdminClasses = () => {
 	return (
 		<div className="AdminClasses">
 			<Sidebar />
-			<div class="page">
+			<div className="page">
 				<div className="handle-data">
 					<div onClick={handlePopUp} className="add-item">
 						<img src={add} alt="add" className="handle-data-icon" />

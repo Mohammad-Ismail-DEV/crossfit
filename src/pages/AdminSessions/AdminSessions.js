@@ -32,7 +32,7 @@ const AdminSessions = () => {
 	return (
 		<div className="AdminSessions">
 			<Sidebar />
-			<div class="page">
+			<div className="page">
 				<div className="handle-data">
 					<div onClick={handleProductPopUp} className="add-item">
 						<img src={add} alt="add" className="handle-data-icon" />
@@ -74,7 +74,7 @@ const AdminSessions = () => {
 										)
 									},
 									{
-										field: "class",
+										field: "className",
 										cellRenderer: ({ data }) => (
 											<div>{data.gym_class.name}</div>
 										)

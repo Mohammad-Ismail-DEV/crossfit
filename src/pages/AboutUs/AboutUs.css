@@ -1,39 +1,34 @@
 .AboutUs-Body {
-    margin: 0;
-    padding: 0;
-    color: rgba(0, 0, 0, 0.78);
-    font-family: 'Arial', sans-serif;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-sizing: border-box; 
-    border-bottom: 25px solid white;
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+	border-bottom: 25px solid white;
+	display: flex;
+
+	.cards {
+		display: flex;
+		align-items: center;
+		padding: 0px 30px;
+		.toggle {
+			height: 50px;
+			aspect-ratio: 1;
+		}
+		.AboutUs-Title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0px 50px;
+			h2 {
+				font-size: 50px;
+				font-weight: bold;
+				color: rgba(0, 0, 0, 0.78);
+			}
+			p {
+				font-size: 25px;
+			}
+		}
+	}
 }
- 
-.AboutUs-Image {
-    float: right;
-    padding-right: 100px;
-    margin: 20px;
-    width: 500px;
-    height: 500px;
-}
-.AboutUs-Image img{
-    width: 500px;
-    height: 500px;
-}
-  
-.AboutUs-Title {
-    max-width: 600px;
-    padding: 10px 20px;
-  
-}
-  
-.AboutUs-Title h2 {
-    color: rgba(0, 0, 0, 0.78);
-}
-  
-.AboutUs-Title p {
-    margin-bottom: 20px;
-}
-  
-  
-  

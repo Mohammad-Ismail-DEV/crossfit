@@ -13,7 +13,7 @@ import Footer from "../../Components/Footer/Footer"
 const Classes = () => {
 	const navigate = useNavigate()
 	return (
-		<div>
+		<div className="Classes">
 			<div className="classes-bg">
 				<img className="image" src={classbg} alt="classes" />
 			</div>
