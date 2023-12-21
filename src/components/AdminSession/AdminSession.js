@@ -116,8 +116,8 @@ const AdminSession = ({ show = false, handlePopUp }) => {
 								className="input"
 								placeholder="Period">
 								<option value={null}>Select Period...</option>
-								{periods.map((v) => (
-									<option value={v}>{v}</option>
+								{periods.map((v, k) => (
+									<option value={k + 1}>{v}</option>
 								))}
 							</select>
 						</div>

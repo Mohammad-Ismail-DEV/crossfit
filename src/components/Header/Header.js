@@ -5,7 +5,7 @@ import userImage from "../../assets/images/user.jpg"
 import logout from "../../assets/images/power-off.png"
 import scheduleImage from "../../assets/images/schedule.png"
 import terminalImage from "../../assets/images/terminal.png"
-import { getMembers, postMember } from "../../axios/axios"
+import { getMembers, getSessions, postMember } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
 	const path = window.location.pathname
 	const [user, setUser] = useState({})
 	const [popUp, setPopUp] = useState("")
+	const [schedule, setSchedule] = useState({})
 	const togglePopUp = (type) => {
 		setPopUp(type)
 		document.body.style.overflow = "hidden"
@@ -59,42 +60,11 @@ const Header = () => {
 			document.body.style.overflow = "unset"
 		}
 	}
-	const schedule = [
-		[
-			{
-				instructor: "Coach Zeina",
-				time: "9:30 - 10:30 AM",
-				class: "Dance Blend"
-			},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{}
-		],
-		[
-			{},
-			{},
-			{
-				class: "Aerobics Body Pump",
-				instructor: "Coach Sam",
-				time: "10:30 - 11:30 Am"
-			},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{}
-		],
-		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
-		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
-		[{}, {}, {}, {}, {}, {}, {}, {}, {}],
-		[{}, {}, {}, {}, {}, {}, {}, {}, {}]
-	]
+
+	const handleSchedule = async () => {
+		const r = await getSessions()
+		setSchedule(r)
+	}
 
 	return (
 		<div className="Header">
@@ -155,7 +125,7 @@ const Header = () => {
 			</div>
 
 			{user.name ? (
-				<div classname="logged-in">
+				<div className="logged-in">
 					<div className="my-classes"></div>
 					<div onClick={handleDropDown} className="user">
 						<div className="user-image-holder">
@@ -292,9 +262,7 @@ const Header = () => {
 						if (event.target !== event.currentTarget) return
 						togglePopUp("")
 					}}>
-					<div className="schedule-holder">
-						<Schedule schedule={schedule} />
-					</div>
+					<Schedule schedule={schedule} />
 				</div>
 			) : (
 				<></>
@@ -321,6 +289,7 @@ const Header = () => {
 						<div
 							onClick={() => {
 								handleDropDown()
+								handleSchedule()
 								togglePopUp("schedule")
 							}}
 							className="drop-down-item">
