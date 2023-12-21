@@ -2,7 +2,7 @@ import React from "react"
 import "./Schedule.css"
 
 const Schedule = ({ schedule }) => {
-	const looper = [...Array(9)]
+	const periodloop = [...Array(9)]
 	return (
 		<div className="Schedule">
 			<div className="days">
@@ -16,7 +16,7 @@ const Schedule = ({ schedule }) => {
 			<div className="grid">
 				{Object.values(schedule)
 					.map((v) =>
-						looper.map((_, k1) =>
+						periodloop.map((_, k1) =>
 							v.find((v2) => v2.period === k1 + 1)
 						)
 					)

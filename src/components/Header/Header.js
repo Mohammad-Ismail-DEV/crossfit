@@ -5,7 +5,7 @@ import userImage from "../../assets/images/user.jpg"
 import logout from "../../assets/images/power-off.png"
 import scheduleImage from "../../assets/images/schedule.png"
 import terminalImage from "../../assets/images/terminal.png"
-import { getMembers, getSessions, postMember } from "../../axios/axios"
+import { getMembers, postMember } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 
 const Header = () => {
@@ -13,7 +13,6 @@ const Header = () => {
 	const path = window.location.pathname
 	const [user, setUser] = useState({})
 	const [popUp, setPopUp] = useState("")
-	const [schedule, setSchedule] = useState({})
 	const togglePopUp = (type) => {
 		setPopUp(type)
 		document.body.style.overflow = "hidden"
@@ -59,11 +58,6 @@ const Header = () => {
 			setPopUp("")
 			document.body.style.overflow = "unset"
 		}
-	}
-
-	const handleSchedule = async () => {
-		const r = await getSessions()
-		setSchedule(r)
 	}
 
 	return (
@@ -262,7 +256,7 @@ const Header = () => {
 						if (event.target !== event.currentTarget) return
 						togglePopUp("")
 					}}>
-					<Schedule schedule={schedule} />
+					<Schedule schedule={user.sessions} />
 				</div>
 			) : (
 				<></>
@@ -289,7 +283,6 @@ const Header = () => {
 						<div
 							onClick={() => {
 								handleDropDown()
-								handleSchedule()
 								togglePopUp("schedule")
 							}}
 							className="drop-down-item">
