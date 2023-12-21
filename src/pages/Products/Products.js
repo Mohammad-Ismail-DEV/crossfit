@@ -2,6 +2,7 @@ import React from "react"
 import "./Products.css"
 import productImg from "../../assets/images/product-bg.jpg"
 import userImg from "../../assets/images/user.jpg"
+import Footer from "../../Components/Footer/Footer"
 
 const Products = () => {
 	return (
@@ -15,6 +16,7 @@ const Products = () => {
 				<p className="price">Price</p>
 				<p>Description of the product</p>
 			</div>
+			<Footer />
 		</div>
 	)
 }

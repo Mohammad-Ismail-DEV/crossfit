@@ -8,6 +8,7 @@ import Table from "../../Components/Table/Table"
 import "./AdminInstructors.css"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
+import Sidebar from "../../Components/Sidebar/Sidebar"
 
 const AdminInstructors = () => {
 	const [showPopUp, setShowPopUp] = useState(false)
@@ -29,44 +30,46 @@ const AdminInstructors = () => {
 
 	return (
 		<div className="AdminInstructors">
-			<div class="handle-data">
-				<div onClick={handlePopUp} className="add-item">
-					<img src={add} alt="add" className="handle-data-icon" />
-					Add Instructor
+			<Sidebar />
+			<div class="page">
+				<div class="handle-data">
+					<div onClick={handlePopUp} className="add-item">
+						<img src={add} alt="add" className="handle-data-icon" />
+						Add Instructor
+					</div>
+					<div onClick={() => handleData()} className="refresh-table">
+						<img
+							src={refresh}
+							alt="refresh"
+							className="handle-data-icon"
+						/>
+						Refresh Data
+					</div>
 				</div>
-				<div onClick={() => handleData()} className="refresh-table">
-					<img
-						src={refresh}
-						alt="refresh"
-						className="handle-data-icon"
+				{rowData.length !== 0 && (
+					<Table
+						rowData={rowData}
+						colDefs={[
+							{
+								field: "actions",
+								cellRenderer: ({ data }) => (
+									<Actions
+										handleData={handleData}
+										address={"instructors"}
+										id={data.id}
+									/>
+								)
+							},
+							...Object.keys(rowData[0])
+								.filter((v) => v !== "id")
+								.map((v) => ({
+									field: v
+								}))
+						]}
 					/>
-					Refresh Data
-				</div>
+				)}
+				<AdminInstructor show={showPopUp} handlePopUp={handlePopUp} />
 			</div>
-			{rowData.length !== 0 && (
-				<Table
-					rowData={rowData}
-					colDefs={[
-						{
-							field: "actions",
-							cellRenderer: ({ data }) => (
-								<Actions
-									handleData={handleData}
-									address={"instructors"}
-									id={data.id}
-									handleData={handleData}
-								/>
-							)
-						},
-						...Object.keys(rowData[0])
-							.filter((v) => v !== "id")
-							.map((v) => ({
-								field: v
-							}))
-					]}
-				/>
-			)}
-			<AdminInstructor show={showPopUp} handlePopUp={handlePopUp} />
 			<Outlet />
 		</div>
 	)

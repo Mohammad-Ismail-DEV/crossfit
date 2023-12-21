@@ -45,6 +45,7 @@ const Header = () => {
 			email: data.email,
 			password: data.password
 		})
+		console.log("r", r)
 		setUser(r[0])
 		setPopUp("")
 		document.body.style.overflow = "unset"
@@ -101,66 +102,58 @@ const Header = () => {
 				<div className="title-b">Cross</div>
 				<div className="title-g">Fit</div>
 			</div>
-			{user.role === "admin" ? (
-				<></>
-			) : (
-				<div className="nav-links">
-					<div
-						onClick={() => navigate("/")}
-						className={`${
-							path === "/" ? "active-nav-link" : "nav-link"
-						}`}>
-						<div>
-							<div className="gd"></div>
-							<div>HOME</div>
-						</div>
-					</div>
-					<div
-						onClick={() => navigate("/about_us")}
-						className={`${
-							path === "/about_us"
-								? "active-nav-link"
-								: "nav-link"
-						}`}>
-						<div>
-							<div className="gd"></div>
-							<div>ABOUT US</div>
-						</div>
-					</div>
-					<div
-						onClick={() => navigate("/classes")}
-						className={`${
-							path === "/classes" ? "active-nav-link" : "nav-link"
-						}`}>
-						<div>
-							<div className="gd"></div>
-							<div>CLASSES</div>
-						</div>
-					</div>
-					<div
-						onClick={() => navigate("/products")}
-						className={`${
-							path === "/products"
-								? "active-nav-link"
-								: "nav-link"
-						}`}>
-						<div>
-							<div className="gd"></div>
-							<div>PRODUCTS</div>
-						</div>
-					</div>
-					<div
-						onClick={() => navigate("/contact_us")}
-						className={`${
-							path === "/contact_us"
-								? "active-nav-link"
-								: "nav-link"
-						}`}>
+
+			<div className="nav-links">
+				<div
+					onClick={() => navigate("/")}
+					className={`${
+						path === "/" ? "active-nav-link" : "nav-link"
+					}`}>
+					<div>
 						<div className="gd"></div>
-						<div>CONTACT US</div>
+						<div>HOME</div>
 					</div>
 				</div>
-			)}
+				<div
+					onClick={() => navigate("/about_us")}
+					className={`${
+						path === "/about_us" ? "active-nav-link" : "nav-link"
+					}`}>
+					<div>
+						<div className="gd"></div>
+						<div>ABOUT US</div>
+					</div>
+				</div>
+				<div
+					onClick={() => navigate("/classes")}
+					className={`${
+						path === "/classes" ? "active-nav-link" : "nav-link"
+					}`}>
+					<div>
+						<div className="gd"></div>
+						<div>CLASSES</div>
+					</div>
+				</div>
+				<div
+					onClick={() => navigate("/products")}
+					className={`${
+						path === "/products" ? "active-nav-link" : "nav-link"
+					}`}>
+					<div>
+						<div className="gd"></div>
+						<div>PRODUCTS</div>
+					</div>
+				</div>
+				<div
+					onClick={() => navigate("/contact_us")}
+					className={`${
+						path === "/contact_us" ? "active-nav-link" : "nav-link"
+					}`}>
+					<div className="gd"></div>
+					<div>CONTACT US</div>
+				</div>
+			</div>
+
 			{user.name ? (
 				<div classname="logged-in">
 					<div className="my-classes"></div>

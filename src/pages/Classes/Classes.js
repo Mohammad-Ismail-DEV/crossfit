@@ -8,6 +8,7 @@ import climbing from "../../assets/images/climbing.png"
 import stretching from "../../assets/images/stretching.png"
 import yoga from "../../assets/images/yoga.png"
 import { useNavigate } from "react-router-dom"
+import Footer from "../../Components/Footer/Footer"
 
 const Classes = () => {
 	const navigate = useNavigate()
@@ -71,6 +72,7 @@ const Classes = () => {
 				</div>
 			</div>
 			<img className="image" src={tablebg} alt="table" />
+			<Footer />
 		</div>
 	)
 }

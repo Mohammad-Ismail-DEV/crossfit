@@ -11,7 +11,7 @@ const AdminMember = ({ show = false, handlePopUp }) => {
 	const [phoneNumber, setPhoneNumber] = useState()
 
 	const getMember = async () => {
-		const r = await getMembers(id)
+		const r = await getMembers({ id })
 		setName(r.name)
 		setEmail(r.email)
 		setPhoneNumber(r.phone_number)

@@ -8,6 +8,7 @@ import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
 import "./AdminBookings.css"
 import AdminBooking from "../../Components/AdminBooking/AdminBooking"
+import Sidebar from "../../Components/Sidebar/Sidebar"
 
 const AdminBookings = () => {
 	const [showPopUp, setShowPopUp] = useState(false)
@@ -28,50 +29,56 @@ const AdminBookings = () => {
 	}
 	return (
 		<div className="AdminBookings">
-			<div className="handle-data">
-				<div onClick={handleProductPopUp} className="add-item">
-					<img src={add} alt="add" className="handle-data-icon" />
-					Add Booking
+			<Sidebar />
+			<div class="page">
+				<div className="handle-data">
+					<div onClick={handleProductPopUp} className="add-item">
+						<img src={add} alt="add" className="handle-data-icon" />
+						Add Booking
+					</div>
+					<div onClick={handleData} className="refresh-table">
+						<img
+							src={refresh}
+							alt="refresh"
+							className="handle-data-icon"
+						/>
+						Refresh Data
+					</div>
 				</div>
-				<div onClick={handleData} className="refresh-table">
-					<img
-						src={refresh}
-						alt="refresh"
-						className="handle-data-icon"
+				{rowData.length !== 0 && (
+					<Table
+						rowData={rowData}
+						colDefs={[
+							{
+								field: "actions",
+								cellRenderer: ({ data }) => (
+									<Actions
+										handleData={handleData}
+										address={"bookings"}
+										id={data.id}
+									/>
+								)
+							},
+							{
+								field: "member",
+								cellRenderer: ({ data }) => (
+									<div>{data.member.name}</div>
+								)
+							},
+							{
+								field: "personal Trainer",
+								cellRenderer: ({ data }) => (
+									<div>{data.personal_trainer.name}</div>
+								)
+							}
+						]}
 					/>
-					Refresh Data
-				</div>
-			</div>
-			{rowData.length !== 0 && (
-				<Table
-					rowData={rowData}
-					colDefs={[
-						{
-							field: "actions",
-							cellRenderer: ({ data }) => (
-								<Actions
-									handleData={handleData}
-									address={"bookings"}
-									id={data.id}
-								/>
-							)
-						},
-						{
-							field: "member",
-							cellRenderer: ({ data }) => (
-								<div>{data.member.name}</div>
-							)
-						},
-						{
-							field: "personal Trainer",
-							cellRenderer: ({ data }) => (
-								<div>{data.personal_trainer.name}</div>
-							)
-						}
-					]}
+				)}
+				<AdminBooking
+					show={showPopUp}
+					handlePopUp={handleProductPopUp}
 				/>
-			)}
-			<AdminBooking show={showPopUp} handlePopUp={handleProductPopUp} />
+			</div>
 			<Outlet />
 		</div>
 	)

@@ -2,6 +2,7 @@ import React from "react"
 import "./AboutUs.css"
 import aboutUs from "../../assets/images/about-img.jpg"
 import imgbg from "../../assets/images/aboutus-bg.jpg"
+import Footer from "../../Components/Footer/Footer"
 
 const AboutUs = () => {
 	return (
@@ -64,6 +65,7 @@ const AboutUs = () => {
 					</p>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	)
 }

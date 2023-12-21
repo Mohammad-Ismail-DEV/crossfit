@@ -1,14 +1,15 @@
 import { BrowserRouter } from "react-router-dom"
 import ScreenRoutes from "./routes/ScreenRoutes"
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
+import Header from "./Components/Header/Header"
+import "./App.css"
 
 function App() {
 	return (
 		<BrowserRouter>
-			<Header />
-			<ScreenRoutes />
-			<Footer />
+			<div className="App">
+				<Header />
+				<ScreenRoutes />
+			</div>
 		</BrowserRouter>
 	)
 }

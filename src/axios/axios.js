@@ -3,11 +3,22 @@ import axios from "axios"
 // Get all and by id HTTP Requests
 export const getMembers = async (params) => {
 	var r = null
-	if (params.email === "admin" && params.password === "admin") {
-		r = [{ name: "admin", role: "admin" }]
-		return r
+	if (params) {
+		if (params.email === "admin" && params.password === "admin") {
+			r = [{ name: "admin", role: "admin" }]
+			return r
+		} else if (params.id) {
+			r = await axios.get(
+				`http://localhost:8000/api/members/${params.id}`,
+				params
+			)
+			return r.data.data
+		} else {
+			r = await axios.get("http://localhost:8000/api/members/", params)
+			return r.data.data
+		}
 	} else {
-		r = await axios.get("http://localhost:8000/api/members", params)
+		r = await axios.get("http://localhost:8000/api/members")
 		return r.data.data
 	}
 }

@@ -7,6 +7,7 @@ import Actions from "../../Components/Actions/Actions"
 import { getMembers } from "../../axios/axios"
 import "./AdminMembers.css"
 import refresh from "../../assets/images/refresh.png"
+import Sidebar from "../../Components/Sidebar/Sidebar"
 
 const AdminMembers = () => {
 	const [showPopUp, setShowPopUp] = useState(false)
@@ -28,39 +29,42 @@ const AdminMembers = () => {
 
 	return (
 		<div className="AdminMembers">
-			<div className="handle-data">
-				<div onClick={handleData} className="refresh-table">
-					<img
-						src={refresh}
-						alt="refresh"
-						className="handle-data-icon"
-					/>
-					Refresh Data
+			<Sidebar />
+			<div class="page">
+				<div className="handle-data">
+					<div onClick={handleData} className="refresh-table">
+						<img
+							src={refresh}
+							alt="refresh"
+							className="handle-data-icon"
+						/>
+						Refresh Data
+					</div>
 				</div>
+				{rowData.length !== 0 && (
+					<Table
+						rowData={rowData}
+						colDefs={[
+							{
+								field: "actions",
+								cellRenderer: ({ data }) => (
+									<Actions
+										handleData={handleData}
+										address={"members"}
+										id={data.id}
+									/>
+								)
+							},
+							...Object.keys(rowData[0])
+								.filter((v) => v !== "id")
+								.map((v) => ({
+									field: v
+								}))
+						]}
+					/>
+				)}
+				<AdminMember show={showPopUp} handlePopUp={handlePopUp} />
 			</div>
-			{rowData.length !== 0 && (
-				<Table
-					rowData={rowData}
-					colDefs={[
-						{
-							field: "actions",
-							cellRenderer: ({ data }) => (
-								<Actions
-									handleData={handleData}
-									address={"members"}
-									id={data.id}
-								/>
-							)
-						},
-						...Object.keys(rowData[0])
-							.filter((v) => v !== "id")
-							.map((v) => ({
-								field: v
-							}))
-					]}
-				/>
-			)}
-			<AdminMember show={showPopUp} handlePopUp={handlePopUp} />
 			<Outlet />
 		</div>
 	)

@@ -8,6 +8,7 @@ import Actions from "../../Components/Actions/Actions"
 import Table from "../../Components/Table/Table"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
+import Sidebar from "../../Components/Sidebar/Sidebar"
 
 const AdminSessions = () => {
 	const [sessions, setSessions] = useState({})
@@ -30,60 +31,66 @@ const AdminSessions = () => {
 
 	return (
 		<div className="AdminSessions">
-			<div className="handle-data">
-				<div onClick={handleProductPopUp} className="add-item">
-					<img src={add} alt="add" className="handle-data-icon" />
-					Add Session
-				</div>
-				<div onClick={handleGetSessions} className="refresh-table">
-					<img
-						src={refresh}
-						alt="refresh"
-						className="handle-data-icon"
-					/>
-					Refresh Data
-				</div>
-			</div>
-			{Object.keys(sessions).length !== 0 ? (
-				Object.keys(sessions).map((day) => (
-					<div>
-						<div className="session-day">{day}</div>
-						<Table
-							rowData={sessions[day]}
-							colDefs={[
-								{
-									field: "actions",
-									cellRenderer: ({ data }) => (
-										<Actions
-											handleData={handleGetSessions}
-											address={"sessions"}
-											id={data.id}
-										/>
-									)
-								},
-								{
-									field: "period"
-								},
-								{
-									field: "instructor",
-									cellRenderer: ({ data }) => (
-										<div>{data.instructor.name}</div>
-									)
-								},
-								{
-									field: "class",
-									cellRenderer: ({ data }) => (
-										<div>{data.gym_class.name}</div>
-									)
-								}
-							]}
-						/>
+			<Sidebar />
+			<div class="page">
+				<div className="handle-data">
+					<div onClick={handleProductPopUp} className="add-item">
+						<img src={add} alt="add" className="handle-data-icon" />
+						Add Session
 					</div>
-				))
-			) : (
-				<></>
-			)}
-			<AdminSession show={showPopUp} handlePopUp={handleProductPopUp} />
+					<div onClick={handleGetSessions} className="refresh-table">
+						<img
+							src={refresh}
+							alt="refresh"
+							className="handle-data-icon"
+						/>
+						Refresh Data
+					</div>
+				</div>
+				{Object.keys(sessions).length !== 0 ? (
+					Object.keys(sessions).map((day) => (
+						<div>
+							<div className="session-day">{day}</div>
+							<Table
+								rowData={sessions[day]}
+								colDefs={[
+									{
+										field: "actions",
+										cellRenderer: ({ data }) => (
+											<Actions
+												handleData={handleGetSessions}
+												address={"sessions"}
+												id={data.id}
+											/>
+										)
+									},
+									{
+										field: "period"
+									},
+									{
+										field: "instructor",
+										cellRenderer: ({ data }) => (
+											<div>{data.instructor.name}</div>
+										)
+									},
+									{
+										field: "class",
+										cellRenderer: ({ data }) => (
+											<div>{data.gym_class.name}</div>
+										)
+									}
+								]}
+							/>
+						</div>
+					))
+				) : (
+					<></>
+				)}
+				<AdminSession
+					show={showPopUp}
+					handlePopUp={handleProductPopUp}
+				/>
+			</div>
 			<Outlet />
 		</div>
 	)
