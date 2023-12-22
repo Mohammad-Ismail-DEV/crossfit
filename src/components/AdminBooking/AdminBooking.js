@@ -30,7 +30,7 @@ const AdminBooking = ({ show = false, handlePopUp }) => {
 		setPersonalTrainerId(r.personal_trainer.id)
 	}
 
-	const addPersonalTrainer = async () => {
+	const addBooking = async () => {
 		if (!isNaN(id)) {
 			await postBoooking({
 				id,
@@ -93,9 +93,7 @@ const AdminBooking = ({ show = false, handlePopUp }) => {
 								))}
 							</select>
 						</div>
-						<div
-							onClick={() => addPersonalTrainer()}
-							className="submit">
+						<div onClick={() => addBooking()} className="submit">
 							Submit
 						</div>
 					</div>

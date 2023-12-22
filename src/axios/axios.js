@@ -3,21 +3,27 @@ import axios from "axios"
 // Get all and by id HTTP Requests
 export const getMembers = async (params) => {
 	var r = null
+	console.log("params", params)
 	if (params) {
-		if (params.email === "admin" && params.password === "admin") {
-			r = [{ name: "admin", role: "admin" }]
-			return r
+		if (params.email && params.password) {
+			if (params.email === "admin" && params.password === "admin") {
+				r = [{ name: "admin", role: "admin" }]
+				return r
+			} else {
+				r = await axios.get("http://localhost:8000/api/members/", {
+					params
+				})
+				return r.data.data
+			}
 		} else if (params.id) {
 			r = await axios.get(
 				`http://localhost:8000/api/members/${params.id}`,
-				params
+				{ params }
 			)
-			return r.data.data
-		} else {
-			r = await axios.get("http://localhost:8000/api/members/", params)
 			return r.data.data
 		}
 	} else {
+		console.log("1", 1)
 		r = await axios.get("http://localhost:8000/api/members")
 		return r.data.data
 	}
@@ -163,6 +169,18 @@ export const postPersonalTrainer = async (params) => {
 			"http://localhost:8000/api/personal_trainers",
 			params
 		)
+	}
+	return r.data.data
+}
+export const postMemberClass = async (params) => {
+	var r = null
+	if (params.id) {
+		r = await axios.put(
+			`http://localhost:8000/api/member_classes/${params.id}`,
+			params
+		)
+	} else {
+		r = await axios.post("http://localhost:8000/api/member_classes", params)
 	}
 	return r.data.data
 }

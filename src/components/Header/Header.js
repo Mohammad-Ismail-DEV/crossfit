@@ -29,6 +29,7 @@ const Header = () => {
 			navigate("/")
 		}
 		setUser({})
+		localStorage.setItem("user_id", null)
 		handleDropDown()
 	}
 
@@ -40,6 +41,13 @@ const Header = () => {
 		phone_number: ""
 	}
 
+	const handleSchedule = async () => {
+		const r = await getMembers({
+			id: user.id
+		})
+		setUser(r)
+	}
+
 	const handleLogin = async () => {
 		const r = await getMembers({
 			email: data.email,
@@ -48,6 +56,7 @@ const Header = () => {
 		console.log("r", r)
 		setUser(r[0])
 		setPopUp("")
+		localStorage.setItem("user_id", r[0].id)
 		document.body.style.overflow = "unset"
 		console.log("r", r)
 	}
@@ -283,6 +292,7 @@ const Header = () => {
 						<div
 							onClick={() => {
 								handleDropDown()
+								handleSchedule()
 								togglePopUp("schedule")
 							}}
 							className="drop-down-item">

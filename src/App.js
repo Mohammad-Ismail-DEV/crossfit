@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header"
 import "./App.css"
 
 function App() {
+	localStorage.setItem("user_id", null)
 	return (
 		<BrowserRouter>
 			<div className="App">
