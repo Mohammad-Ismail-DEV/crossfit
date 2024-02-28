@@ -14,10 +14,14 @@ const Home = () => {
 			<div className="intro">
 				<div className="intro-title">What Is Crossfit?</div>
 				<div className="intro-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-					commodo viverra maecenas accumsan lacus vel facilisis.
+					Our health and fitness center management system will
+					function as a centralized platform that offers membership
+					management, appointment scheduling, workout tracking, and
+					administrative tools. It will provide members with access to
+					personalized workout plans, registration for classes, and a
+					community forum. The system will support staff in managing
+					memberships, scheduling classes, and monitoring equipment
+					maintenance.
 				</div>
 			</div>
 			<div className="gym">
@@ -88,15 +92,20 @@ const Home = () => {
 						<div className="gd-big"></div>
 						<div className="lifestyle-title">Lifestyle & Diet</div>
 						<div className="lifestyle-description">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Quis ipsum suspendisse ultrices
-							gravida. Risus commodo viverra maecenas accumsan
-							lacus vel facilisis. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Quis
-							ipsum suspendisse ultrices gravida. Risus commodo
-							viverra maecenas accumsan lacus vel facilisis.
+							Eating healthy involves making consious choices to
+							nourish your body with nutrient-rich foods that
+							support overall well-being. This includes
+							incorporating a variety of fruits, vegetables, whole
+							grains, lean proteins, and healthy fats into your
+							diet while minimizing processed foods, sugars, and
+							excessive fats. A balanced diet provides vitamins,
+							minerals, and antioxidants necessary for optimal
+							phyiscal and mental health, helping to prevent
+							chronic diseases and maintain a healthy weight.
+							Adopting healthy eating habits not only fuels your
+							body for energy and vitality but also fosters a
+							prositive relationship with food, promoting
+							long-term health and wellness.
 						</div>
 					</div>
 					<img src={lifestyle} alt="lifestyle" />
