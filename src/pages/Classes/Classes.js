@@ -15,12 +15,15 @@ import {
 	postMemberClass
 } from "../../axios/axios"
 import Schedule from "../../Components/Schedule/Schedule"
+import { useAtom } from "jotai"
+import { userAtom } from "../../store/atoms"
 
 const Classes = () => {
 	const [schedule, setSchedule] = useState({})
 	const [session, setSession] = useState({})
 	const [sessions, setSessions] = useState([])
-	const [userId, setUserId] = useState()
+	const [user, setUser] = useAtom(userAtom)
+	const [loadingSchedule, setLoadingSchedule] = useState(true)
 	const [day, setDay] = useState(null)
 	const [personalTrainerId, setPersonalTrainerId] = useState(null)
 	const [personalTrainers, setPersonalTrainers] = useState([])
@@ -32,15 +35,17 @@ const Classes = () => {
 
 	const addBooking = async () => {
 		await postBoooking({
-			member_id: userId,
+			member_id: user.id,
 			personal_trainer_id: personalTrainerId
 		})
 		reset()
 	}
 
 	const handleSchedule = async () => {
+		setLoadingSchedule(true)
 		const r = await getSessions()
 		setSchedule(r)
+		setLoadingSchedule(false)
 	}
 
 	const days = [
@@ -70,7 +75,7 @@ const Classes = () => {
 
 	const handlePostSession = async () => {
 		await postMemberClass({
-			member_id: userId,
+			member_id: user.id,
 			session_id: session
 		})
 		reset()
@@ -79,8 +84,7 @@ const Classes = () => {
 	useEffect(() => {
 		handleGetSessions()
 		getPts()
-		setUserId(localStorage.getItem("user_id"))
-	}, [localStorage.getItem("user_id")])
+	}, [user])
 
 	return (
 		<div className="Classes">
@@ -142,7 +146,7 @@ const Classes = () => {
 				</div>
 			</div>
 
-			{!isNaN(userId) ? (
+			{!isNaN(user.id) ? (
 				<div className="member_classes">
 					<div className="join-sessions">
 						<div className="join-session-title">
@@ -220,7 +224,7 @@ const Classes = () => {
 				<></>
 			)}
 			<div className="image">
-				<Schedule schedule={schedule} />
+				<Schedule loading={loadingSchedule} schedule={schedule} />
 			</div>
 			<Footer />
 		</div>

@@ -9,8 +9,7 @@
 		flex-direction: row;
 		color: white;
 		background-color: rgba(0, 0, 0, 0.78);
-		padding: 1vh 2vw;
-		justify-content: space-around;
+		padding: 1vh 0vw;
 		height: 4vh;
 		font-size: 120%;
 	}
@@ -18,7 +17,7 @@
 		justify-content: center;
 		align-items: center;
 		display: flex;
-		width: 10vw;
+		width: calc(100vw / 6);
 		font-weight: bold;
 	}
 	.grid {

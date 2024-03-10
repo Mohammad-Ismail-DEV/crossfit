@@ -74,6 +74,17 @@ export const getBookings = async (id) => {
 	}
 	return r.data.data
 }
+export const getUserBookings = async (member_id) => {
+	var r = null
+	if (member_id) {
+		r = await axios.get(`http://localhost:8000/api/user_bookings`, {
+			parms: { member_id }
+		})
+	} else {
+		r = await axios.get("http://localhost:8000/api/user_bookings")
+	}
+	return r.data.data
+}
 export const getPersonalTrainers = async (id) => {
 	var r = null
 	if (id) {

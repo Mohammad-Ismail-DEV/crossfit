@@ -1,17 +1,25 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./Header.css"
 import { useNavigate } from "react-router-dom"
 import userImage from "../../assets/images/user.jpg"
 import logout from "../../assets/images/power-off.png"
 import scheduleImage from "../../assets/images/schedule.png"
 import terminalImage from "../../assets/images/terminal.png"
-import { getMembers, postMember } from "../../axios/axios"
+import {
+	getMembers,
+	getUserBookings,
+	livechat,
+	postMember
+} from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
+import { useAtom } from "jotai"
+import { cartAtom, userAtom } from "../../store/atoms"
+import WhatsappWidget from "../WhatsappWidget/WhatsappWidget"
 
 const Header = () => {
 	const navigate = useNavigate()
 	const path = window.location.pathname
-	const [user, setUser] = useState({})
+	const [user, setUser] = useAtom(userAtom)
 	const [popUp, setPopUp] = useState("")
 	const togglePopUp = (type) => {
 		setPopUp(type)
@@ -29,7 +37,6 @@ const Header = () => {
 			navigate("/")
 		}
 		setUser({})
-		localStorage.setItem("user_id", null)
 		handleDropDown()
 	}
 
@@ -53,12 +60,10 @@ const Header = () => {
 			email: data.email,
 			password: data.password
 		})
-		console.log("r", r)
 		setUser(r[0])
 		setPopUp("")
-		localStorage.setItem("user_id", r[0].id)
+
 		document.body.style.overflow = "unset"
-		console.log("r", r)
 	}
 	const handleRegister = async () => {
 		if (data.password === data.repeatPassword) {
@@ -75,7 +80,6 @@ const Header = () => {
 				<div className="title-b">Cross</div>
 				<div className="title-g">Fit</div>
 			</div>
-
 			<div className="nav-links">
 				<div
 					onClick={() => navigate("/")}
@@ -265,7 +269,9 @@ const Header = () => {
 						if (event.target !== event.currentTarget) return
 						togglePopUp("")
 					}}>
-					<Schedule schedule={user.sessions} />
+					<div className="schedule-holder">
+						<Schedule schedule={user.sessions} />
+					</div>
 				</div>
 			) : (
 				<></>
