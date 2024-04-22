@@ -9,22 +9,22 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 	const id = params.id
 	const [name, setName] = useState("")
 	const [description, setDescription] = useState("")
-	// const [photo, setPhoto] = useState()
+	const [image, setImage] = useState()
 	const [price, setPrice] = useState()
 
 	const getProduct = async () => {
 		const r = await getProducts(id)
 		setName(r.name)
 		setDescription(r.description)
-		// setPhoto(r.photo)
+		setImage(r.image)
 		setPrice(r.price)
 	}
 
 	const addProduct = async () => {
 		if (!isNaN(id)) {
-			await postProduct({ id, name, description, photo: "photo", price })
+			await postProduct({ id, name, description, image, price })
 		} else {
-			await postProduct({ name, description, photo: "photo", price })
+			await postProduct({ name, description, image, price })
 		}
 		handlePopUp()
 	}
@@ -91,12 +91,11 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 								<div className="uppy-holder">
 									<UppyUpload
 										onComplete={(e) => {
+											setImage(e[0].data.name)
 											console.log("e", e[0].data.name)
 										}}
 										name="image"
-										// defaultImages={
-										// 	product?.data?.image && [product?.data?.image]
-										// }
+										defaultImages={image && [image]}
 										singleFile
 									/>
 								</div>

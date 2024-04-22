@@ -27,8 +27,7 @@ const Products = () => {
 				{products.map((data) => (
 					<ProductCard
 						data={{
-							...data,
-							image: "https://images.pexels.com/photos/821651/pexels-photo-821651.jpeg?cs=srgb&dl=pexels-alex-andrews-821651.jpg&fm=jpg"
+							...data
 						}}
 					/>
 				))}

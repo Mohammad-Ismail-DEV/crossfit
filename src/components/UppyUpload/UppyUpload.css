@@ -1,25 +1,30 @@
 .UppyUpload {
 	display: flex;
 	gap: 10px;
-	.images-holder {
-		width: 100%;
-		gap: 10px;
-		display: grid;
-		align-content: start;
-		grid-template-columns: repeat(3, 1fr);
-		.image-holder {
-			position: relative;
-			.icon-delete {
-				position: absolute;
-				top: 0;
-				right: 0;
-				font-size: 2rem;
-				color: red;
-				cursor: pointer;
+	.input-holder {
+		height: 400px;
+		width: 400px;
+		.images-holder {
+			width: 100%;
+			gap: 10px;
+			display: grid;
+			align-content: start;
+			grid-template-columns: repeat(3, 1fr);
+			.image-holder {
+				position: relative;
+				.icon-delete {
+					position: absolute;
+					top: 0;
+					right: 0;
+					font-size: 2rem;
+					color: red;
+					cursor: pointer;
+				}
 			}
 		}
 	}
 	.Image {
+		height: 300px;
 		aspect-ratio: 1;
 	}
 }

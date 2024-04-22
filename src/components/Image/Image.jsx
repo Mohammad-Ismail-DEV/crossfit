@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import "./Image.css"
+
 const Image = ({
 	className = "",
 	src,
@@ -8,9 +10,9 @@ const Image = ({
 	defaultSrc = "./images/default.png",
 	...attr
 }) => {
-	const src2 = fromServer
-		? `${import.meta.env.VITE_SERVER_URL}/media/${src}`
-		: src
+	console.log("src", src)
+	console.log("fromServer", fromServer)
+	const src2 = fromServer ? `http://localhost:8000/media/${src}` : src
 	const [stateSrc, setStateSrc] = useState()
 
 	useEffect(() => {
@@ -20,6 +22,7 @@ const Image = ({
 	const handleError = () => {
 		// setStateSrc(defaultSrc)
 	}
+	console.log("stateSrc", stateSrc)
 
 	return (
 		<div className={`Image ${className}`} onError={handleError} {...attr}>

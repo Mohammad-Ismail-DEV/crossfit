@@ -28,6 +28,7 @@ const UppyUpload = ({
 	useEffect(() => {
 		const handleComplete = (r) => {
 			const response = r.successful.map((v) => v.response.body)
+			console.log("response", response[0].data)
 			if (singleFile) {
 				setImages([response[0].data.name])
 			} else {
@@ -48,14 +49,24 @@ const UppyUpload = ({
 		setImages(images?.filter((_, k) => k !== index))
 	}
 
-	console.log("images", images)
-
 	return (
 		<div className="UppyUpload">
-			<input name={name} type="hidden" value={images?.join(",")} />
-			<Dashboard uppy={uppy} waitForThumbnailsBeforeUpload {...attr} />
+			<div className="input-holder">
+				<input
+					className="input-holder"
+					name={name}
+					type="hidden"
+					value={images?.join(",")}
+				/>
+				<Dashboard
+					className="input-holder"
+					uppy={uppy}
+					waitForThumbnailsBeforeUpload
+					{...attr}
+				/>
+			</div>
 			<div className="images-holder">
-				{images?.map((v, k) => (
+				{defaultImages?.map((v, k) => (
 					<div className="image-holder" key={k}>
 						<div
 							className="icon-delete fas fa-circle-xmark"
