@@ -12,6 +12,7 @@ const uppy = new Uppy().use(XHRUpload, {
 const UppyUpload = ({
 	name,
 	onComplete,
+	onSubmit = false,
 	defaultImages = [],
 	restrictions = {},
 	singleFile = true,
@@ -38,6 +39,7 @@ const UppyUpload = ({
 				])
 			}
 			onComplete?.(response)
+			uppy.removeFile()
 		}
 		uppy.on("complete", handleComplete)
 		return () => {
@@ -48,6 +50,10 @@ const UppyUpload = ({
 	const handleDeleteImage = (index) => {
 		setImages(images?.filter((_, k) => k !== index))
 	}
+
+	useEffect(() => {
+		uppy.cancelAll()
+	}, [onSubmit])
 
 	return (
 		<div className="UppyUpload">

@@ -4,7 +4,7 @@ import "ag-grid-community/styles/ag-grid.css" // Core CSS
 import "ag-grid-community/styles/ag-theme-quartz.css" // Theme
 import "./Table.css"
 
-const Table = ({ rowData, colDefs }) => {
+const Table = ({ rowData, colDefs, rowHeight = 40 }) => {
 	const gridOptions = {
 		autoSizeStrategy: {
 			type: "fitCellContents"
@@ -20,6 +20,7 @@ const Table = ({ rowData, colDefs }) => {
 	return (
 		<div className="ag-theme-quartz Table">
 			<AgGridReact
+				rowHeight={rowHeight}
 				rowData={rowData}
 				columnDefs={colDefs}
 				gridOptions={gridOptions}

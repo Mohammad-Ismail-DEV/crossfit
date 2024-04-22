@@ -9,6 +9,8 @@ import { getProducts } from "../../axios/axios"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
 import Sidebar from "../../Components/Sidebar/Sidebar"
+import Image from "../../Components/Image/Image"
+import { width } from "@fortawesome/free-solid-svg-icons/fa0"
 
 const AdminProducts = () => {
 	const [showPopUp, setShowPopUp] = useState(false)
@@ -48,6 +50,7 @@ const AdminProducts = () => {
 				</div>
 				{rowData.length !== 0 && (
 					<Table
+						rowHeight={75}
 						rowData={rowData}
 						colDefs={[
 							{
@@ -61,10 +64,24 @@ const AdminProducts = () => {
 								)
 							},
 							...Object.keys(rowData[0])
-								.filter((v) => v !== "id")
+								.filter((v) => v !== "id" && v !== "image")
 								.map((v) => ({
 									field: v
-								}))
+								})),
+							{
+								field: "image",
+								cellRenderer: ({ data }) => (
+									<Image
+										fromServer
+										src={data?.image}
+										alt="Product"
+										style={{
+											height: "70px",
+											width: "70px"
+										}}
+									/>
+								)
+							}
 						]}
 					/>
 				)}

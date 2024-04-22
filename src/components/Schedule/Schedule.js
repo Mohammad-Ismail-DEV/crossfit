@@ -17,546 +17,546 @@ const Schedule = ({ loading, schedule }) => {
 					<div className="column">
 						<div
 							className={
-								schedule.Monday?.first ? `session` : `clear`
+								schedule.Monday?.First ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.first?.gym_class.name}</div>
-							<div>{schedule.Monday?.first?.instructor.name}</div>
+							<div>{schedule.Monday?.First?.gym_class.name}</div>
+							<div>{schedule.Monday?.First?.instructor.name}</div>
 						</div>
 						<div
 							className={
-								schedule.Monday?.second ? `session` : `clear`
+								schedule.Monday?.Second ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.second?.gym_class.name}</div>
+							<div>{schedule.Monday?.Second?.gym_class.name}</div>
 							<div>
-								{schedule.Monday?.second?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Monday?.third ? `session` : `clear`
-							}>
-							<div>{schedule.Monday?.third?.gym_class.name}</div>
-							<div>{schedule.Monday?.third?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Monday?.fourth ? `session` : `clear`
-							}>
-							<div>{schedule.Monday?.fourth?.gym_class.name}</div>
-							<div>
-								{schedule.Monday?.fourth?.instructor.name}
+								{schedule.Monday?.Second?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Monday?.fifth ? `session` : `clear`
+								schedule.Monday?.Third ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.fifth?.gym_class.name}</div>
-							<div>{schedule.Monday?.fifth?.instructor.name}</div>
+							<div>{schedule.Monday?.Third?.gym_class.name}</div>
+							<div>{schedule.Monday?.Third?.instructor.name}</div>
 						</div>
 						<div
 							className={
-								schedule.Monday?.sixth ? `session` : `clear`
+								schedule.Monday?.Fourth ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.sixth?.gym_class.name}</div>
-							<div>{schedule.Monday?.sixth?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Monday?.seventh ? `session` : `clear`
-							}>
+							<div>{schedule.Monday?.Fourth?.gym_class.name}</div>
 							<div>
-								{schedule.Monday?.seventh?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Monday?.seventh?.instructor.name}
+								{schedule.Monday?.Fourth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Monday?.eighth ? `session` : `clear`
+								schedule.Monday?.Fifth ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.eighth?.gym_class.name}</div>
+							<div>{schedule.Monday?.Fifth?.gym_class.name}</div>
+							<div>{schedule.Monday?.Fifth?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Monday?.Sixth ? `session` : `clear`
+							}>
+							<div>{schedule.Monday?.Sixth?.gym_class.name}</div>
+							<div>{schedule.Monday?.Sixth?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Monday?.Seventh ? `session` : `clear`
+							}>
 							<div>
-								{schedule.Monday?.eighth?.instructor.name}
+								{schedule.Monday?.Seventh?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Monday?.Seventh?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Monday?.ninth ? `session` : `clear`
+								schedule.Monday?.Eighth ? `session` : `clear`
 							}>
-							<div>{schedule.Monday?.ninth?.gym_class.name}</div>
-							<div>{schedule.Monday?.ninth?.instructor.name}</div>
-						</div>
-					</div>
-					<div className="column">
-						<div
-							className={
-								schedule.Tuesday?.first ? `session` : `clear`
-							}>
-							<div>{schedule.Tuesday?.first?.gym_class.name}</div>
+							<div>{schedule.Monday?.Eighth?.gym_class.name}</div>
 							<div>
-								{schedule.Tuesday?.first?.instructor.name}
+								{schedule.Monday?.Eighth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Tuesday?.second ? `session` : `clear`
+								schedule.Monday?.Ninth ? `session` : `clear`
 							}>
-							<div>
-								{schedule.Tuesday?.second?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Tuesday?.second?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.third ? `session` : `clear`
-							}>
-							<div>{schedule.Tuesday?.third?.gym_class.name}</div>
-							<div>
-								{schedule.Tuesday?.third?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.fourth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Tuesday?.fourth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Tuesday?.fourth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.fifth ? `session` : `clear`
-							}>
-							<div>{schedule.Tuesday?.fifth?.gym_class.name}</div>
-							<div>
-								{schedule.Tuesday?.fifth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.sixth ? `session` : `clear`
-							}>
-							<div>{schedule.Tuesday?.sixth?.gym_class.name}</div>
-							<div>
-								{schedule.Tuesday?.sixth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.seventh ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Tuesday?.seventh?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Tuesday?.seventh?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.eighth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Tuesday?.eighth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Tuesday?.eighth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Tuesday?.ninth ? `session` : `clear`
-							}>
-							<div>{schedule.Tuesday?.ninth?.gym_class.name}</div>
-							<div>
-								{schedule.Tuesday?.ninth?.instructor.name}
-							</div>
+							<div>{schedule.Monday?.Ninth?.gym_class.name}</div>
+							<div>{schedule.Monday?.Ninth?.instructor.name}</div>
 						</div>
 					</div>
 					<div className="column">
 						<div
 							className={
-								schedule.Wednesday?.first ? `session` : `clear`
+								schedule.Tuesday?.First ? `session` : `clear`
 							}>
+							<div>{schedule.Tuesday?.First?.gym_class.name}</div>
 							<div>
-								{schedule.Wednesday?.first?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Wednesday?.first?.instructor.name}
+								{schedule.Tuesday?.First?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.second ? `session` : `clear`
+								schedule.Tuesday?.Second ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Wednesday?.second?.gym_class.name}
+								{schedule.Tuesday?.Second?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Wednesday?.second?.instructor.name}
+								{schedule.Tuesday?.Second?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.third ? `session` : `clear`
+								schedule.Tuesday?.Third ? `session` : `clear`
 							}>
+							<div>{schedule.Tuesday?.Third?.gym_class.name}</div>
 							<div>
-								{schedule.Wednesday?.third?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Wednesday?.third?.instructor.name}
+								{schedule.Tuesday?.Third?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.fourth ? `session` : `clear`
+								schedule.Tuesday?.Fourth ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Wednesday?.fourth?.gym_class.name}
+								{schedule.Tuesday?.Fourth?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Wednesday?.fourth?.instructor.name}
+								{schedule.Tuesday?.Fourth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.fifth ? `session` : `clear`
+								schedule.Tuesday?.Fifth ? `session` : `clear`
 							}>
+							<div>{schedule.Tuesday?.Fifth?.gym_class.name}</div>
 							<div>
-								{schedule.Wednesday?.fifth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Wednesday?.fifth?.instructor.name}
+								{schedule.Tuesday?.Fifth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.sixth ? `session` : `clear`
+								schedule.Tuesday?.Sixth ? `session` : `clear`
 							}>
+							<div>{schedule.Tuesday?.Sixth?.gym_class.name}</div>
 							<div>
-								{schedule.Wednesday?.sixth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Wednesday?.sixth?.instructor.name}
+								{schedule.Tuesday?.Sixth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.seventh
+								schedule.Tuesday?.Seventh ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Tuesday?.Seventh?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Tuesday?.Seventh?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Tuesday?.Eighth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Tuesday?.Eighth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Tuesday?.Eighth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Tuesday?.Ninth ? `session` : `clear`
+							}>
+							<div>{schedule.Tuesday?.Ninth?.gym_class.name}</div>
+							<div>
+								{schedule.Tuesday?.Ninth?.instructor.name}
+							</div>
+						</div>
+					</div>
+					<div className="column">
+						<div
+							className={
+								schedule.Wednesday?.First ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.First?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.First?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Second ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.Second?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.Second?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Third ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.Third?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.Third?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Fourth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.Fourth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.Fourth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Fifth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.Fifth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.Fifth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Sixth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Wednesday?.Sixth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Wednesday?.Sixth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Wednesday?.Seventh
 									? `session`
 									: `clear`
 							}>
 							<div>
-								{schedule.Wednesday?.seventh?.gym_class.name}
+								{schedule.Wednesday?.Seventh?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Wednesday?.seventh?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Wednesday?.eighth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Wednesday?.eighth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Wednesday?.eighth?.instructor.name}
+								{schedule.Wednesday?.Seventh?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Wednesday?.ninth ? `session` : `clear`
+								schedule.Wednesday?.Eighth ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Wednesday?.ninth?.gym_class.name}
+								{schedule.Wednesday?.Eighth?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Wednesday?.ninth?.instructor.name}
-							</div>
-						</div>
-					</div>
-					<div className="column">
-						<div
-							className={
-								schedule.Thursday?.first ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.first?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.first?.instructor.name}
+								{schedule.Wednesday?.Eighth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Thursday?.second ? `session` : `clear`
+								schedule.Wednesday?.Ninth ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Thursday?.second?.gym_class.name}
+								{schedule.Wednesday?.Ninth?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Thursday?.second?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.third ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.third?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.third?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.fourth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.fourth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.fourth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.fifth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.fifth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.fifth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.sixth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.sixth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.sixth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.seventh ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.seventh?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.seventh?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.eighth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.eighth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.eighth?.instructor.name}
-							</div>
-						</div>
-						<div
-							className={
-								schedule.Thursday?.ninth ? `session` : `clear`
-							}>
-							<div>
-								{schedule.Thursday?.ninth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Thursday?.ninth?.instructor.name}
+								{schedule.Wednesday?.Ninth?.instructor.name}
 							</div>
 						</div>
 					</div>
 					<div className="column">
 						<div
 							className={
-								schedule.Friday?.first ? `session` : `clear`
+								schedule.Thursday?.First ? `session` : `clear`
 							}>
-							<div>{schedule.Friday?.first?.gym_class.name}</div>
-							<div>{schedule.Friday?.first?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Friday?.second ? `session` : `clear`
-							}>
-							<div>{schedule.Friday?.second?.gym_class.name}</div>
 							<div>
-								{schedule.Friday?.second?.instructor.name}
+								{schedule.Thursday?.First?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.First?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Friday?.third ? `session` : `clear`
+								schedule.Thursday?.Second ? `session` : `clear`
 							}>
-							<div>{schedule.Friday?.third?.gym_class.name}</div>
-							<div>{schedule.Friday?.third?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Friday?.fourth ? `session` : `clear`
-							}>
-							<div>{schedule.Friday?.fourth?.gym_class.name}</div>
 							<div>
-								{schedule.Friday?.fourth?.instructor.name}
+								{schedule.Thursday?.Second?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Second?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Friday?.fifth ? `session` : `clear`
-							}>
-							<div>{schedule.Friday?.fifth?.gym_class.name}</div>
-							<div>{schedule.Friday?.fifth?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Friday?.sixth ? `session` : `clear`
-							}>
-							<div>{schedule.Friday?.sixth?.gym_class.name}</div>
-							<div>{schedule.Friday?.sixth?.instructor.name}</div>
-						</div>
-						<div
-							className={
-								schedule.Friday?.seventh ? `session` : `clear`
+								schedule.Thursday?.Third ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Friday?.seventh?.gym_class.name}
+								{schedule.Thursday?.Third?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Friday?.seventh?.instructor.name}
+								{schedule.Thursday?.Third?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Friday?.eighth ? `session` : `clear`
+								schedule.Thursday?.Fourth ? `session` : `clear`
 							}>
-							<div>{schedule.Friday?.eighth?.gym_class.name}</div>
 							<div>
-								{schedule.Friday?.eighth?.instructor.name}
+								{schedule.Thursday?.Fourth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Fourth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Friday?.ninth ? `session` : `clear`
+								schedule.Thursday?.Fifth ? `session` : `clear`
 							}>
-							<div>{schedule.Friday?.ninth?.gym_class.name}</div>
-							<div>{schedule.Friday?.ninth?.instructor.name}</div>
+							<div>
+								{schedule.Thursday?.Fifth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Fifth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Thursday?.Sixth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Thursday?.Sixth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Sixth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Thursday?.Seventh ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Thursday?.Seventh?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Seventh?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Thursday?.Eighth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Thursday?.Eighth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Eighth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Thursday?.Ninth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Thursday?.Ninth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Thursday?.Ninth?.instructor.name}
+							</div>
 						</div>
 					</div>
 					<div className="column">
 						<div
 							className={
-								schedule.Saturday?.first ? `session` : `clear`
+								schedule.Friday?.First ? `session` : `clear`
 							}>
+							<div>{schedule.Friday?.First?.gym_class.name}</div>
+							<div>{schedule.Friday?.First?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Friday?.Second ? `session` : `clear`
+							}>
+							<div>{schedule.Friday?.Second?.gym_class.name}</div>
 							<div>
-								{schedule.Saturday?.first?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Saturday?.first?.instructor.name}
+								{schedule.Friday?.Second?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.second ? `session` : `clear`
+								schedule.Friday?.Third ? `session` : `clear`
 							}>
+							<div>{schedule.Friday?.Third?.gym_class.name}</div>
+							<div>{schedule.Friday?.Third?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Friday?.Fourth ? `session` : `clear`
+							}>
+							<div>{schedule.Friday?.Fourth?.gym_class.name}</div>
 							<div>
-								{schedule.Saturday?.second?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Saturday?.second?.instructor.name}
+								{schedule.Friday?.Fourth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.third ? `session` : `clear`
+								schedule.Friday?.Fifth ? `session` : `clear`
+							}>
+							<div>{schedule.Friday?.Fifth?.gym_class.name}</div>
+							<div>{schedule.Friday?.Fifth?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Friday?.Sixth ? `session` : `clear`
+							}>
+							<div>{schedule.Friday?.Sixth?.gym_class.name}</div>
+							<div>{schedule.Friday?.Sixth?.instructor.name}</div>
+						</div>
+						<div
+							className={
+								schedule.Friday?.Seventh ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.third?.gym_class.name}
+								{schedule.Friday?.Seventh?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.third?.instructor.name}
+								{schedule.Friday?.Seventh?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.fourth ? `session` : `clear`
+								schedule.Friday?.Eighth ? `session` : `clear`
 							}>
+							<div>{schedule.Friday?.Eighth?.gym_class.name}</div>
 							<div>
-								{schedule.Saturday?.fourth?.gym_class.name}
-							</div>
-							<div>
-								{schedule.Saturday?.fourth?.instructor.name}
+								{schedule.Friday?.Eighth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.fifth ? `session` : `clear`
+								schedule.Friday?.Ninth ? `session` : `clear`
+							}>
+							<div>{schedule.Friday?.Ninth?.gym_class.name}</div>
+							<div>{schedule.Friday?.Ninth?.instructor.name}</div>
+						</div>
+					</div>
+					<div className="column">
+						<div
+							className={
+								schedule.Saturday?.First ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.fifth?.gym_class.name}
+								{schedule.Saturday?.First?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.fifth?.instructor.name}
+								{schedule.Saturday?.First?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.sixth ? `session` : `clear`
+								schedule.Saturday?.Second ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.sixth?.gym_class.name}
+								{schedule.Saturday?.Second?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.sixth?.instructor.name}
+								{schedule.Saturday?.Second?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.seventh ? `session` : `clear`
+								schedule.Saturday?.Third ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.seventh?.gym_class.name}
+								{schedule.Saturday?.Third?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.seventh?.instructor.name}
+								{schedule.Saturday?.Third?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.eighth ? `session` : `clear`
+								schedule.Saturday?.Fourth ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.eighth?.gym_class.name}
+								{schedule.Saturday?.Fourth?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.eighth?.instructor.name}
+								{schedule.Saturday?.Fourth?.instructor.name}
 							</div>
 						</div>
 						<div
 							className={
-								schedule.Saturday?.ninth ? `session` : `clear`
+								schedule.Saturday?.Fifth ? `session` : `clear`
 							}>
 							<div>
-								{schedule.Saturday?.ninth?.gym_class.name}
+								{schedule.Saturday?.Fifth?.gym_class.name}
 							</div>
 							<div>
-								{schedule.Saturday?.ninth?.instructor.name}
+								{schedule.Saturday?.Fifth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Saturday?.Sixth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Saturday?.Sixth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Saturday?.Sixth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Saturday?.Seventh ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Saturday?.Seventh?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Saturday?.Seventh?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Saturday?.Eighth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Saturday?.Eighth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Saturday?.Eighth?.instructor.name}
+							</div>
+						</div>
+						<div
+							className={
+								schedule.Saturday?.Ninth ? `session` : `clear`
+							}>
+							<div>
+								{schedule.Saturday?.Ninth?.gym_class.name}
+							</div>
+							<div>
+								{schedule.Saturday?.Ninth?.instructor.name}
 							</div>
 						</div>
 					</div>

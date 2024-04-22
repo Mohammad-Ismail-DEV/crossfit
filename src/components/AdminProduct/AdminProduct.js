@@ -20,13 +20,21 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 		setPrice(r.price)
 	}
 
+	const [submit, setSubmit] = useState(false)
+
 	const addProduct = async () => {
 		if (!isNaN(id)) {
+			setSubmit(true)
 			await postProduct({ id, name, description, image, price })
 		} else {
 			await postProduct({ name, description, image, price })
 		}
 		handlePopUp()
+		setSubmit(false)
+		setName()
+		setDescription()
+		setImage()
+		setPrice()
 	}
 
 	useEffect(() => {
@@ -94,6 +102,7 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 											setImage(e[0].data.name)
 											console.log("e", e[0].data.name)
 										}}
+										onSubmit={submit}
 										name="image"
 										defaultImages={image && [image]}
 										singleFile
