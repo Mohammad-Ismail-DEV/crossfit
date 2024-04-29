@@ -1,7 +1,10 @@
 .Home {
 	.intro {
 		height: 500px;
-		padding: 200px 0px 0px 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background-image: url("../../assets/images/intro.jpg");
 		.intro-title {
 			font-size: 90px;
@@ -66,7 +69,8 @@
 		flex-direction: column;
 		gap: 50px;
 		height: 500px;
-		padding: 200px 0px 0px 400px;
+		justify-content: center;
+		align-items: center;
 		background-image: url("../../assets/images/testimonials.jpg");
 		.testimony {
 			width: 700px;
