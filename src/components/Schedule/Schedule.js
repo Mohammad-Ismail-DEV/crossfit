@@ -5,6 +5,7 @@ const Schedule = ({ loading, schedule }) => {
 	return (
 		<div className="Schedule">
 			<div className="days">
+				<div className="day">Class Time</div>
 				<div className="day">Monday</div>
 				<div className="day">Tuesday</div>
 				<div className="day">Wednesday</div>
@@ -15,6 +16,18 @@ const Schedule = ({ loading, schedule }) => {
 			{!loading ? (
 				<div className="grid">
 					<div className="column">
+						<div className="time">7:00 - 8:15</div>
+						<div className="time">9:00 - 9:15</div>
+						<div className="time">11:00 - 11:45</div>
+						<div className="time">1:00 - 2:15</div>
+						<div className="time">3:00 - 1:15</div>
+						<div className="time">5:00 - 1:15</div>
+						<div className="time">7:00 - 1:15</div>
+						<div className="time">9:00 - 1:15</div>
+						<div className="time">11:00 - 12:00</div>
+					</div>	
+					<div className="column">
+						
 						<div
 							className={
 								schedule.Monday?.First ? `session` : `clear`
