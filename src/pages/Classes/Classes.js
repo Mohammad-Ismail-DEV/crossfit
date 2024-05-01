@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom"
 import Footer from "../../Components/Footer/Footer"
 import {
 	getPersonalTrainers,
+	getSChedule,
 	getSessions,
 	postBoooking,
 	postMemberClass
@@ -43,7 +44,7 @@ const Classes = () => {
 
 	const handleSchedule = async () => {
 		setLoadingSchedule(true)
-		const r = await getSessions()
+		const r = await getSChedule()
 		setSchedule(r)
 		setLoadingSchedule(false)
 	}

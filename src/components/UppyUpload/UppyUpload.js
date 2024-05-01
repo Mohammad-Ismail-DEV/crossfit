@@ -6,7 +6,10 @@ import Image from "../Image/Image"
 import "./UppyUpload.css"
 
 const uppy = new Uppy().use(XHRUpload, {
-	endpoint: "http://localhost:8000/api/upload"
+	endpoint: "http://localhost:8000/api/upload",
+	headers: {
+		"Accept":"Application/JSON"
+	}
 })
 
 const UppyUpload = ({

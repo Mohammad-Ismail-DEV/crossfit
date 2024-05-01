@@ -10,7 +10,6 @@ import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
 import Sidebar from "../../Components/Sidebar/Sidebar"
 import Image from "../../Components/Image/Image"
-import { width } from "@fortawesome/free-solid-svg-icons/fa0"
 
 const AdminProducts = () => {
 	const [showPopUp, setShowPopUp] = useState(false)

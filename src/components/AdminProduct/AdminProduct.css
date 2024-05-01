@@ -28,6 +28,7 @@
 				flex-direction: column;
 			}
 			.right {
+				width:700px;
 				display: flex;
 				gap: 5px;
 				flex-direction: column;

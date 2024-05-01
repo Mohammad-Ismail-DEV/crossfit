@@ -65,6 +65,16 @@ export const getSessions = async (id) => {
 		return r.data
 	}
 }
+export const getSChedule = async (id) => {
+	var r = null
+	if (id) {
+		r = await axios.get(`http://localhost:8000/api/schedule/${id}`)
+		return r.data.data
+	} else {
+		r = await axios.get("http://localhost:8000/api/schedule")
+		return r.data
+	}
+}
 export const getBookings = async (id) => {
 	var r = null
 	if (id) {

@@ -2,4 +2,21 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
 }
+.uppy-Dashboard,
+    .uppy-Dashboard-inner,
+    .uppy-Container,
+    .uppy-Root {
+        height: 100% !important;
+        width: 100% !important;
+    }
+	.uppy-StatusBar-actionCircleBtn:focus {
+		box-shadow: unset !important;
+	}
+	button {
+
+		background: unset;
+		border: unset;
+		outline: unset;
+	}
