@@ -54,7 +54,7 @@ const AdminClasses = () => {
 								cellRenderer: ({ data }) => (
 									<Actions
 										handleData={handleData}
-										address={"classes"}
+										address={"gym_classes"}
 										id={data.id}
 									/>
 								)

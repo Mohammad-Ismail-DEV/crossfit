@@ -99,8 +99,8 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 								<div className="uppy-holder">
 									<UppyUpload
 										onComplete={(e) => {
-											setImage(e[0].data.name)
-											console.log("e", e[0].data.name)
+											setImage(e[0].data)
+											console.log("e", e[0].data)
 										}}
 										onSubmit={submit}
 										name="image"
