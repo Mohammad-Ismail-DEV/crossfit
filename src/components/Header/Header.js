@@ -60,8 +60,12 @@ const Header = () => {
 			email: data.email,
 			password: data.password
 		})
-		setUser(r[0])
-		setPopUp("")
+		if(r.length>0){
+			setUser(r[0])
+			setPopUp("")
+		}else{
+			alert("Wrong email or password")
+		}
 
 		document.body.style.overflow = "unset"
 	}
