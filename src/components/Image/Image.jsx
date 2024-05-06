@@ -10,8 +10,6 @@ const Image = ({
 	defaultSrc = "./images/default.png",
 	...attr
 }) => {
-	console.log("src", src)
-	console.log("fromServer", fromServer)
 	const src2 = fromServer ? `http://localhost:8000/media/${src}` : src
 	const [stateSrc, setStateSrc] = useState()
 
@@ -22,7 +20,6 @@ const Image = ({
 	const handleError = () => {
 		// setStateSrc(defaultSrc)
 	}
-	console.log("stateSrc", stateSrc)
 
 	return (
 		<div className={`Image ${className}`} onError={handleError} {...attr}>

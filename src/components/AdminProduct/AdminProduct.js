@@ -100,7 +100,6 @@ const AdminProduct = ({ show = false, handlePopUp }) => {
 									<UppyUpload
 										onComplete={(e) => {
 											setImage(e[0].data)
-											console.log("e", e[0].data)
 										}}
 										onSubmit={submit}
 										name="image"

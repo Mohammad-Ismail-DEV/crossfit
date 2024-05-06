@@ -32,7 +32,6 @@ const UppyUpload = ({
 	useEffect(() => {
 		const handleComplete = (r) => {
 			const response = r.successful.map((v) => v.response.body)
-			console.log("response", response[0].data)
 			if (singleFile) {
 				setImages([response[0].data.name])
 			} else {

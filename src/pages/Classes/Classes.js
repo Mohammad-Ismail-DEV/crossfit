@@ -16,14 +16,14 @@ import {
 	postMemberClass
 } from "../../axios/axios"
 import Schedule from "../../Components/Schedule/Schedule"
-import { useAtom } from "jotai"
+import { useAtomValue } from "jotai"
 import { userAtom } from "../../store/atoms"
 
 const Classes = () => {
 	const [schedule, setSchedule] = useState({})
 	const [session, setSession] = useState({})
 	const [sessions, setSessions] = useState([])
-	const [user, setUser] = useAtom(userAtom)
+	const user = useAtomValue(userAtom)
 	const [loadingSchedule, setLoadingSchedule] = useState(true)
 	const [day, setDay] = useState(null)
 	const [personalTrainerId, setPersonalTrainerId] = useState(null)

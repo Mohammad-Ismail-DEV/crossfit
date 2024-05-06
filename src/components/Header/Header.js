@@ -7,14 +7,11 @@ import scheduleImage from "../../assets/images/schedule.png"
 import terminalImage from "../../assets/images/terminal.png"
 import {
 	getMembers,
-	getUserBookings,
-	livechat,
 	postMember
 } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 import { useAtom } from "jotai"
-import { cartAtom, userAtom } from "../../store/atoms"
-import WhatsappWidget from "../WhatsappWidget/WhatsappWidget"
+import {  userAtom } from "../../store/atoms"
 
 const Header = () => {
 	const navigate = useNavigate()
@@ -63,11 +60,11 @@ const Header = () => {
 		if(r.length>0){
 			setUser(r[0])
 			setPopUp("")
+			document.body.style.overflow = "unset"
 		}else{
 			alert("Wrong email or password")
 		}
 
-		document.body.style.overflow = "unset"
 	}
 	const handleRegister = async () => {
 		if (data.password === data.repeatPassword) {
