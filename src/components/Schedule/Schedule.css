@@ -26,7 +26,7 @@
 		gap: 10px;
 	}
 	.column {
-		width: calc(100% / 6);
+		width: calc(100% / 7);
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
@@ -47,6 +47,17 @@
 	.clear {
 		color: white;
 		border: 1px solid white;
+		/* border: 0.3vw solid transparent; */
+		height: 3vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1vw;
+	}
+	.time {
+		color: white;
+		background-color: #82d026;
+		border: 1px solid transparent;
 		/* border: 0.3vw solid transparent; */
 		height: 3vh;
 		display: flex;
