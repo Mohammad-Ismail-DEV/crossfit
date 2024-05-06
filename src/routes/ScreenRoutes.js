@@ -44,7 +44,7 @@ const ScreenRoutes = () => {
 			</Route>
 			<Route path="/admin_panel/classes" element={<AdminClasses />}>
 				<Route
-					path="/admin_panel/classes/edit_classes/:id"
+					path="/admin_panel/classes/edit_gym_classes/:id"
 					element={
 						<AdminClass show={true} handlePopUp={handlePopUp} />
 					}
