@@ -13,8 +13,7 @@ import {
 } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 import { useAtom } from "jotai"
-import { cartAtom, userAtom } from "../../store/atoms"
-
+import {  userAtom } from "../../store/atoms"
 
 const Header = () => {
 	// line 21 and 22 btetna2al ben saf7at
@@ -66,11 +65,11 @@ const Header = () => {
 		if(r.length>0){
 			setUser(r[0])
 			setPopUp("")
+			document.body.style.overflow = "unset"
 		}else{
 			alert("Wrong email or password")
 		}
 
-		document.body.style.overflow = "unset"
 	}
 	// twafit new member (user) 3al database 3l register
 	const handleRegister = async () => {

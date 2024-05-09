@@ -3,7 +3,6 @@ import axios from "axios"
 // Get all and by id HTTP Requests
 export const getMembers = async (params) => {
 	var r = null
-	console.log("params", params)
 	if (params) {
 		if (params.email && params.password) {
 			if (params.email === "admin" && params.password === "admin") {
@@ -23,7 +22,6 @@ export const getMembers = async (params) => {
 			return r.data.data
 		}
 	} else {
-		console.log("1", 1)
 		r = await axios.get("http://localhost:8000/api/members")
 		return r.data.data
 	}
