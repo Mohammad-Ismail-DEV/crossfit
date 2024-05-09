@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from "react"
 import "./Header.css"
+// react-router-dom btetna2al ben saf7at
 import { useNavigate } from "react-router-dom"
+// btjeeb sowar w bt7ot esma la test3mla
 import userImage from "../../assets/images/user.jpg"
 import logout from "../../assets/images/power-off.png"
 import scheduleImage from "../../assets/images/schedule.png"
 import terminalImage from "../../assets/images/terminal.png"
 import {
 	getMembers,
-	getUserBookings,
-	livechat,
 	postMember
 } from "../../axios/axios"
 import Schedule from "../Schedule/Schedule"
 import { useAtom } from "jotai"
 import { cartAtom, userAtom } from "../../store/atoms"
-import WhatsappWidget from "../WhatsappWidget/WhatsappWidget"
+
 
 const Header = () => {
+	// line 21 and 22 btetna2al ben saf7at
 	const navigate = useNavigate()
 	const path = window.location.pathname
+	// user & popup old values -- setUser & setPopUp new values
 	const [user, setUser] = useAtom(userAtom)
 	const [popUp, setPopUp] = useState("")
 	const togglePopUp = (type) => {
@@ -55,6 +57,7 @@ const Header = () => {
 		setUser(r)
 	}
 
+	// tjble l memember tafaseelo
 	const handleLogin = async () => {
 		const r = await getMembers({
 			email: data.email,
@@ -69,6 +72,7 @@ const Header = () => {
 
 		document.body.style.overflow = "unset"
 	}
+	// twafit new member (user) 3al database 3l register
 	const handleRegister = async () => {
 		if (data.password === data.repeatPassword) {
 			const r = await postMember(data)
@@ -134,7 +138,7 @@ const Header = () => {
 					<div>CONTACT US</div>
 				</div>
 			</div>
-
+			{/* user.name tbayin esem l user bas ta3ml login */}
 			{user.name ? (
 				<div className="logged-in">
 					<div className="my-classes"></div>
@@ -147,6 +151,7 @@ const Header = () => {
 							/>
 						</div>
 						<div className="user-name">
+							{/* bas awal 7aref mnil esem l 3mlna 3le login ykun capital letter */}
 							{user.name.charAt(0).toUpperCase() +
 								user.name.slice(1)}
 						</div>
@@ -200,6 +205,10 @@ const Header = () => {
 			) : (
 				<></>
 			)}
+
+
+
+			{/* eza kabasna register shu l tafaseel bt3teena */}
 			{popUp === "register" ? (
 				<div
 					className="popUp"
@@ -266,6 +275,8 @@ const Header = () => {
 			) : (
 				<></>
 			)}
+
+			{/* eza kabasna 3l login hode l tafaseel */}
 			{popUp === "schedule" ? (
 				<div
 					className="popUp"

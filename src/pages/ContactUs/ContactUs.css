@@ -80,3 +80,12 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.text {
+	font-size: 20px;
+}
+
+.text-button {
+	font-size: 20px;
+	color: #82d026;
+}

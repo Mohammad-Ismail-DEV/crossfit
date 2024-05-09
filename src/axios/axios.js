@@ -43,7 +43,7 @@ export const getClasses = async (id) => {
 		r = await axios.get(`http://localhost:8000/api/gym_classes/${id}`)
 	} else {
 		r = await axios.get("http://localhost:8000/api/gym_classes")
-	}
+	}	
 	return r.data.data
 }
 export const getInstructors = async (id) => {
@@ -105,7 +105,7 @@ export const getPersonalTrainers = async (id) => {
 	return r.data.data
 }
 
-// Post and Update HTTP Requests
+// Post and Update HTTP Requests btb3at 3l database
 export const postMember = async (params) => {
 	var r = null
 	if (params.id) {

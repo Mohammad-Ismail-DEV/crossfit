@@ -2,12 +2,17 @@ import React, { useState } from "react"
 import "./ContactUs.css"
 import contactUs from "../../assets/images/contact-bg.jpg"
 import Footer from "../../Components/Footer/Footer"
+import { useNavigate } from "react-router-dom"
+import { useAtom } from "jotai"
+import { userAtom } from "../../store/atoms"
 
 const ContactUs = () => {
+	const navigate = useNavigate()
 	const [name, setName] = useState("")
 	const [email, setEmail] = useState("")
 	const [subject, setSubject] = useState("")
 	const [message, setMessage] = useState("")
+	const [user, setUser] = useAtom(userAtom)
 
 	return (
 		<div className="ContactUs">
@@ -30,7 +35,7 @@ const ContactUs = () => {
 						<div className="flex">
 							<div className="placeholder"></div>
 							<input
-								value={name}
+								value={name}	
 								className="name-input"
 								type="text"
 								placeholder="Name"
@@ -66,16 +71,20 @@ const ContactUs = () => {
 							rows="5"
 						/>
 					</div>
-					<div
-						onClick={() => {
-							setEmail("")
-							setName("")
-							setSubject("")
-							setMessage("")
-						}}
-						className="ContactUs-submit">
-						Send
-					</div>
+					{!isNaN(user.id) ? (
+						<div
+							onClick={() => {
+								setEmail("")
+								setName("")
+								setSubject("")
+								setMessage("")
+							}}
+							className="ContactUs-submit">
+							Send
+						</div>
+					) : (
+						<div className="text">To contact us, please<button className="text-button" onClick={() => navigate("/")}>Login.</button></div>
+					)}
 				</div>
 			</div>
 			<Footer />
