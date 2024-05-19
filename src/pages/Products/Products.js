@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import "./Products.css"
 import productImg from "../../assets/images/product-bg.jpg"
 import userImg from "../../assets/images/user.jpg"
-import Footer from "../../Components/Footer/Footer"
-import ProductCard from "../../Components/ProductCard/ProductCard"
+import Footer from "../../components/Footer/Footer"
+import ProductCard from "../../components/ProductCard/ProductCard"
 import { getProducts } from "../../axios/axios"
 
 const Products = () => {

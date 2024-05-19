@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./ContactUs.css"
 import contactUs from "../../assets/images/contact-bg.jpg"
-import Footer from "../../Components/Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 import { useNavigate } from "react-router-dom"
 import { useAtom } from "jotai"
 import { userAtom } from "../../store/atoms"

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react"
-import AdminProduct from "../../Components/AdminProduct/AdminProduct"
+import AdminProduct from "../../components/AdminProduct/AdminProduct"
 import { useState } from "react"
 import "./AdminProducts.css"
-import Table from "../../Components/Table/Table"
+import Table from "../../components/Table/Table"
 import { Outlet } from "react-router-dom"
-import Actions from "../../Components/Actions/Actions"
+import Actions from "../../components/Actions/Actions"
 import { getProducts } from "../../axios/axios"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
-import Sidebar from "../../Components/Sidebar/Sidebar"
-import Image from "../../Components/Image/Image"
+import Sidebar from "../../components/Sidebar/Sidebar"
+import Image from "../../components/Image/Image"
 
 const AdminProducts = () => {
 	const [showPopUp, setShowPopUp] = useState(false)
