@@ -1,13 +1,13 @@
 import React, { useEffect } from "react"
-import AdminMember from "../../Components/AdminMember/AdminMember"
+import AdminMember from "../../components/AdminMember/AdminMember"
 import { useState } from "react"
-import Table from "../../Components/Table/Table"
+import Table from "../../components/Table/Table"
 import { Outlet } from "react-router-dom"
-import Actions from "../../Components/Actions/Actions"
+import Actions from "../../components/Actions/Actions"
 import { getMembers } from "../../axios/axios"
 import "./AdminMembers.css"
 import refresh from "../../assets/images/refresh.png"
-import Sidebar from "../../Components/Sidebar/Sidebar"
+import Sidebar from "../../components/Sidebar/Sidebar"
 
 const AdminMembers = () => {
 	const [showPopUp, setShowPopUp] = useState(false)

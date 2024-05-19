@@ -1,14 +1,14 @@
 import React, { useEffect } from "react"
-import AdminInstructor from "../../Components/AdminInstructor/AdminInstructor"
+import AdminInstructor from "../../components/AdminInstructor/AdminInstructor"
 import { useState } from "react"
 import { Outlet } from "react-router-dom"
 import { getInstructors } from "../../axios/axios"
-import Actions from "../../Components/Actions/Actions"
-import Table from "../../Components/Table/Table"
+import Actions from "../../components/Actions/Actions"
+import Table from "../../components/Table/Table"
 import "./AdminInstructors.css"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
-import Sidebar from "../../Components/Sidebar/Sidebar"
+import Sidebar from "../../components/Sidebar/Sidebar"
 
 const AdminInstructors = () => {
 	const [showPopUp, setShowPopUp] = useState(false)

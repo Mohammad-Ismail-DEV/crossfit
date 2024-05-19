@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react"
-import AdminPersonalTrainer from "../../Components/AdminPersonalTrainer/AdminPersonalTrainer"
-import Table from "../../Components/Table/Table"
+import AdminPersonalTrainer from "../../components/AdminPersonalTrainer/AdminPersonalTrainer"
+import Table from "../../components/Table/Table"
 import { Outlet } from "react-router-dom"
-import Actions from "../../Components/Actions/Actions"
+import Actions from "../../components/Actions/Actions"
 import { getPersonalTrainers } from "../../axios/axios"
 import add from "../../assets/images/add.png"
 import refresh from "../../assets/images/refresh.png"
 import "./AdminPersonalTrainers.css"
-import Sidebar from "../../Components/Sidebar/Sidebar"
+import Sidebar from "../../components/Sidebar/Sidebar"
 
 const AdminPersonalTrainers = () => {
 	const [showPopUp, setShowPopUp] = useState(false)

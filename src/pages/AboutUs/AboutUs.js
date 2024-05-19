@@ -4,7 +4,7 @@ import aboutUs from "../../assets/images/about-img.jpg"
 import imgbg from "../../assets/images/aboutus-bg.jpg"
 import before from "../../assets/images/before.png"
 import after from "../../assets/images/after.png"
-import Footer from "../../Components/Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 
 const AboutUs = () => {
 	const [cardNum, setCardNum] = useState(0)

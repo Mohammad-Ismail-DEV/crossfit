@@ -7,7 +7,7 @@ import climbing from "../../assets/images/climbing.png"
 import stretching from "../../assets/images/stretching.png"
 import yoga from "../../assets/images/yoga.png"
 import { useNavigate } from "react-router-dom"
-import Footer from "../../Components/Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 import {
 	getPersonalTrainers,
 	getSChedule,
@@ -15,7 +15,7 @@ import {
 	postBoooking,
 	postMemberClass
 } from "../../axios/axios"
-import Schedule from "../../Components/Schedule/Schedule"
+import Schedule from "../../components/Schedule/Schedule"
 import { useAtomValue } from "jotai"
 import { userAtom } from "../../store/atoms"
 

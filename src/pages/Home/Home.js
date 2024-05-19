@@ -5,7 +5,7 @@ import climbing from "../../assets/images/climbing.png"
 import stretching from "../../assets/images/stretching.png"
 import lifestyle from "../../assets/images/lifestyle.jpg"
 import { useNavigate } from "react-router-dom"
-import Footer from "../../Components/Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 
 const Home = () => {
 	const navigate = useNavigate()
