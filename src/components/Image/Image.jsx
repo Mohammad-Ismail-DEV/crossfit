@@ -10,7 +10,7 @@ const Image = ({
 	defaultSrc = "./images/default.png",
 	...attr
 }) => {
-	const src2 = fromServer ? `http://localhost:8000/media/${src}` : src
+	const src2 = fromServer ? `https://crossfit-api.000webhostapp.com/media/${src}` : src
 	const [stateSrc, setStateSrc] = useState()
 
 	useEffect(() => {

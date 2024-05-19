@@ -6,7 +6,7 @@ import Image from "../Image/Image"
 import "./UppyUpload.css"
 
 const uppy = new Uppy().use(XHRUpload, {
-	endpoint: "http://localhost:8000/api/upload",
+	endpoint: "https://crossfit-api.000webhostapp.com/api/upload",
 	headers: {
 		"Accept":"Application/JSON"
 	}

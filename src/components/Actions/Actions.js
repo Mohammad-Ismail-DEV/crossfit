@@ -9,7 +9,7 @@ import axios from "axios"
 const Actions = ({ id, address, handleData }) => {
 	const navigate = useNavigate()
 	const handleDelete = async () => {
-		await axios.delete(`http://localhost:8000/api/${address}/${id}`)
+		await axios.delete(`https://crossfit-api.000webhostapp.com/api/${address}/${id}`)
 		handleData()
 	}
 
